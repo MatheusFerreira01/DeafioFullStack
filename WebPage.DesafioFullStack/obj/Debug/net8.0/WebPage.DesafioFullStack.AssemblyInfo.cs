@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WebPage.DesafioFullStack")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ddeee890648a9c91ea5b736ef6f9450464d9a218")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e00ce2ef2c5685a2c2bd124978b53a3f18a85cb4")]
 [assembly: System.Reflection.AssemblyProductAttribute("WebPage.DesafioFullStack")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WebPage.DesafioFullStack")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

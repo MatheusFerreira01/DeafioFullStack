@@ -67,7 +67,7 @@ namespace API.DesafioFullStack.Services
         {
             List<Device> getDevices = BaseConfigurations.LoadDeviceConfigs();
 
-            Device getDeviceUpdate = getDevices.FirstOrDefault(x => x.Identifier == Identifier);
+            Device? getDeviceUpdate = getDevices.FirstOrDefault(x => x.Identifier == Identifier);
 
             if (getDeviceUpdate == null)
             {

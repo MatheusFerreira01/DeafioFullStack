@@ -11,6 +11,48 @@
             <returns>Uma lista de dispositivos.</returns>
             <response code="200">Requisição executada com sucesso</response>
             <response code="401">As credenciais fornecidas pelo usuário são inexistentes ou inválidas</response>
+            <response code="500">Erro interno no servidor</response>
+        </member>
+        <member name="M:Controllers.DeviceController.AddNewDevice(Shared.Models.DesafioFullStack.Device)">
+            <summary>
+            Cadastra um novo dispositivo na plataforma.
+            </summary>
+            <param name="NewDevice">Detalhes do dispositivo sendo cadastrados</param>
+            <returns>Detalhes do dispositivo sendo cadastrados.</returns>
+            <response code="200">Requisição executada com sucesso</response>
+            <response code="401">As credenciais fornecidas pelo usuário são inexistentes ou inválidas</response>
+            <response code="500">Erro interno no servidor</response>
+        </member>
+        <member name="M:Controllers.DeviceController.GetDevice(System.String)">
+            <summary>
+            Retorna os detalhes de um dispositivo.
+            </summary>
+            <param name="Identifier">Identificador do dispositivo para o qual os detalhes devem ser retornados</param>
+            <returns>Uma lista de dispositivos.</returns>
+            <response code="200">Requisição executada com sucesso</response>
+            <response code="401">As credenciais fornecidas pelo usuário são inexistentes ou inválidas</response>
+            <response code="500">Erro interno no servidor</response>
+        </member>
+        <member name="M:Controllers.DeviceController.UpdateDevice(System.String,Shared.Models.DesafioFullStack.Device)">
+            <summary>
+            Atualiza os dados de um dispositivo.
+            </summary>
+            <returns>Uma lista de dispositivos.</returns>
+            <param name="Identifier">Identificador do dispositivo para o qual os detalhes devem ser atualizados</param>
+            <param name="UpdateValues">Detalhes atualizados do dispositivo</param>
+            <response code="200">Requisição executada com sucesso</response>
+            <response code="401">As credenciais fornecidas pelo usuário são inexistentes ou inválidas</response>
+            <response code="500">Erro interno no servidor</response>
+        </member>
+        <member name="M:Controllers.DeviceController.DeleteDeviceDetais(System.String)">
+            <summary>
+            Remove os dados de um dispositivo.
+            </summary>
+            <param name="Identifier">Identificador do dispositivo para o qual os detalhes devem ser removidos</param>
+            <returns>Uma lista de dispositivos.</returns>
+            <response code="200">Requisição executada com sucesso</response>
+            <response code="401">As credenciais fornecidas pelo usuário são inexistentes ou inválidas</response>
+            <response code="500">Erro interno no servidor</response>
         </member>
     </members>
 </doc>

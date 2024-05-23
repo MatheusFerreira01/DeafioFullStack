@@ -6,6 +6,13 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Remove="Views\User\**" />
+    <Content Remove="Views\User\**" />
+    <EmbeddedResource Remove="Views\User\**" />
+    <None Remove="Views\User\**" />
+  </ItemGroup>
+
 	<ItemGroup>
 		<PackageReference Include="Microsoft.Extensions.Http" Version="5.0.0" />
 	</ItemGroup>
@@ -13,10 +20,6 @@
 	<ItemGroup>
 	  <ProjectReference Include="..\Shared.DataBase.DesafioFullStack\Shared.DataBase.DesafioFullStack.csproj" />
 	  <ProjectReference Include="..\Shared.Models.DesafioFullStack\Shared.Models.DesafioFullStack.csproj" />
-	</ItemGroup>
-
-	<ItemGroup>
-	  <Folder Include="Views\User\" />
 	</ItemGroup>
 	
 </Project>

@@ -42,7 +42,7 @@ public class DeviceController : Controller
             client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Basic", authToken);
         }
 
-        var response = client.GetAsync(CommonApi.DesafioFSApiUrl + CommonApi.DesafioFSGetListDevicesRoute).Result;
+        var response = client.GetAsync(CommonApi.DFSApiUrl + CommonApi.DFSGetListDevicesRoute).Result;
 
         if (response.IsSuccessStatusCode)
         {

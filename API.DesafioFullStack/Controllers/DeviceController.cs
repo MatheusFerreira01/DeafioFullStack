@@ -30,7 +30,8 @@ namespace Controllers
         /// <returns>Uma lista de dispositivos.</returns>
         /// <response code="200">Requisição executada com sucesso</response>
         /// <response code="401">As credenciais fornecidas pelo usuário são inexistentes ou inválidas</response>
-
+        /// <response code="500">Erro interno no servidor</response>
+        [Authorize]
         [HttpGet]
         [ProducesResponseType(typeof(IEnumerable<Device>), 200)]
         [ProducesResponseType(500)]
@@ -51,16 +52,23 @@ namespace Controllers
                 return StatusCode(500, "Erro grave: " + ex.Message);
             }
         }
-
+        /// <summary>
+        /// Cadastra um novo dispositivo na plataforma.
+        /// </summary>
+        /// <param name="NewDevice">Detalhes do dispositivo sendo cadastrados</param>
+        /// <returns>Detalhes do dispositivo sendo cadastrados.</returns>
+        /// <response code="200">Requisição executada com sucesso</response>
+        /// <response code="401">As credenciais fornecidas pelo usuário são inexistentes ou inválidas</response>
+        /// <response code="500">Erro interno no servidor</response>
+        
         [Authorize]
-        [HttpPost("{Id}")]
+        [HttpPost]
         [ProducesResponseType(typeof(IEnumerable<Device>), 200)]
-        [ProducesResponseType(500)]
-        public IActionResult AddNewDevice([FromBody] Device newDevice)
+        public IActionResult AddNewDevice([FromBody] Device NewDevice)
         {
             try
             {
-                var device = _deviceInterface.AddNewDevice(newDevice);
+                var device = _deviceInterface.AddNewDevice(NewDevice);
 
                 if (device is null)
                 {
@@ -74,10 +82,18 @@ namespace Controllers
             }
         }
 
+        /// <summary>
+        /// Retorna os detalhes de um dispositivo.
+        /// </summary>
+        /// <param name="Identifier">Identificador do dispositivo para o qual os detalhes devem ser retornados</param>
+        /// <returns>Uma lista de dispositivos.</returns>
+        /// <response code="200">Requisição executada com sucesso</response>
+        /// <response code="401">As credenciais fornecidas pelo usuário são inexistentes ou inválidas</response>
+        /// <response code="500">Erro interno no servidor</response>
+        
         [Authorize]
         [HttpGet("{Id}")]
         [ProducesResponseType(typeof(IEnumerable<Device>), 200)]
-        [ProducesResponseType(500)]
         public IActionResult GetDevice(string Identifier)
         {
             try
@@ -96,10 +112,19 @@ namespace Controllers
             }
         }
 
+        /// <summary>
+        /// Atualiza os dados de um dispositivo.
+        /// </summary>
+        /// <returns>Uma lista de dispositivos.</returns>
+        /// <param name="Identifier">Identificador do dispositivo para o qual os detalhes devem ser atualizados</param>
+        /// <param name="UpdateValues">Detalhes atualizados do dispositivo</param>
+        /// <response code="200">Requisição executada com sucesso</response>
+        /// <response code="401">As credenciais fornecidas pelo usuário são inexistentes ou inválidas</response>
+        /// <response code="500">Erro interno no servidor</response>
+        
         [Authorize]
         [HttpPut("{Id}")]
         [ProducesResponseType(typeof(IEnumerable<Device>), 200)]
-        [ProducesResponseType(500)]
         public IActionResult UpdateDevice(string Identifier, [FromBody] Device UpdateValues)
         {
             try
@@ -118,11 +143,18 @@ namespace Controllers
                 return StatusCode(500, "Erro grave: " + ex.Message);
             }
         }
-
+        /// <summary>
+        /// Remove os dados de um dispositivo.
+        /// </summary>
+        /// <param name="Identifier">Identificador do dispositivo para o qual os detalhes devem ser removidos</param>
+        /// <returns>Uma lista de dispositivos.</returns>
+        /// <response code="200">Requisição executada com sucesso</response>
+        /// <response code="401">As credenciais fornecidas pelo usuário são inexistentes ou inválidas</response>
+        /// <response code="500">Erro interno no servidor</response>
+        
         [Authorize]
         [HttpDelete("{Id}")]
         [ProducesResponseType(typeof(IEnumerable<Device>), 200)]
-        [ProducesResponseType(500)]
         public IActionResult DeleteDeviceDetais(string Identifier)
         {
             try
@@ -140,34 +172,6 @@ namespace Controllers
             {
 
                 throw;
-            }
-        }
-
-        [Authorize]
-        [HttpGet("SendCommand")]
-        [ProducesResponseType(typeof(IEnumerable<Device>), 200)]
-        [ProducesResponseType(500)]
-        [ApiExplorerSettings(IgnoreApi = true)]
-        public async Task<IActionResult> SendCommand(string Id, int Port, string Command)
-        {
-            try
-            {
-                using (TcpClient client = new TcpClient(Id, Port))
-                using (NetworkStream stream = client.GetStream())
-                {
-                    byte[] data = Encoding.ASCII.GetBytes(Command + "\n");
-                    await stream.WriteAsync(data, 0, data.Length);
-
-                    byte[] responseData = new byte[1024];
-                    int bytes = await stream.ReadAsync(responseData, 0, responseData.Length);
-                    string response = Encoding.ASCII.GetString(responseData, 0, bytes);
-
-                    return Ok(response);
-                }
-            }
-            catch (Exception ex)
-            {
-                return StatusCode(500, $"Error: {ex.Message}");
             }
         }
     }

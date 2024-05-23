@@ -4,13 +4,25 @@ namespace WebPage.DesafioFullStack.Controllers.Users
 {
     public class UserManagerController : Controller
     {
-        public IActionResult Index()
+        public IActionResult UserManagement()
         {
             return View();
         }
 
-        public IActionResult Teste()
+        public IActionResult AddNew()    
         {
+
+            return View();
+        }
+        public IActionResult Update()
+        {
+
+            return View();
+        }
+
+        public IActionResult Delete()
+        {
+
             return View();
         }
     }

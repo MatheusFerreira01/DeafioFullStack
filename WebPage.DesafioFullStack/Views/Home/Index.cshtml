@@ -1,19 +1,35 @@
-﻿@{
+﻿@model bool
+@{
     ViewBag.Title = "Home";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<div class="container text-center">
-    <h2>Bem-vindo ao Painel de Controle</h2>
-    <div class="row mt-4">
-        <div class="col-md-3 mb-3">
-            <a href="@Url.Action("DeviceListSelector", "Device")" class="btn btn-primary btn-block">Monitorar Dispositivos</a>
+<div class="container fixed-top mb-5">
+    <div class="row align-items-center">
+        <div class="col-md-6">
+            <h2>Bem-vindo(a) @TempData["FullName"].ToString()</h2>
         </div>
-        <div class="col-md-3 mb-3">
-            <a href="@Url.Action("Teste", "User")" class="btn btn-primary btn-block">Gerenciar Usuários</a>
-        </div>
-        <div class="col-md-3 mb-3">
-            <a href="@Url.Action("Index", "DeviceManager")" class="btn btn-primary btn-block">Gerenciar Dispositivos</a>
+        <div class="col-md-6 text-right">
+            <a href="@Url.Action("Logout", "Authentication")" class="btn btn-link text-decoration-none">Sair</a>
         </div>
     </div>
 </div>
+
+<div class="button-container mx-auto">
+    <div class="col-md-4 mb-3">
+        <a href="@Url.Action("DeviceListSelector", "Device")" class="btn btn-primary btn-block">Monitorar Dispositivos Cadastrados </a>
+    </div>
+    @if (Model)
+    {
+        <div class="col-md-4 mb-3">
+            <a href="@Url.Action("UserManagement", "UserManager")" class="btn btn-secondary btn-block">Gerenciamento de Usuários</a>
+        </div>
+        <div class="col-md-4 mb-3">
+            <a href="@Url.Action("Index", "DeviceManager")" class="btn btn-success btn-block">Gerenciamento de Dispositivos</a> 
+        </div>
+    }
+</div>
+
+
+
+

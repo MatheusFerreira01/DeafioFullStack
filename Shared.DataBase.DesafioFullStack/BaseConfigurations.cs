@@ -43,10 +43,10 @@ namespace Shared.DataBase.DesafioFullStack
             string partToRemove = @"\DeafioFullStack";
 
             string baseDirectory = originalPath.Substring(0, originalPath.IndexOf(partToRemove) + partToRemove.Length);
-
-            string fullPath = Path.Combine(baseDirectory, "Shared.DataBase.DesafioFullStack\\BaseFiles");
-
-            if (!File.Exists(fullPath))
+            
+            string fullPath = Path.Combine(baseDirectory, @"Shared.DataBase.DesafioFullStack\BaseFiles");
+    
+            if (!Directory.Exists(fullPath))
             {
                 Directory.CreateDirectory(fullPath);
 

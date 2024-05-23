@@ -1,7 +1,6 @@
 Operation;Description;Result;Format
-Ler Valor;Realiza o valor de leitura do dispositivo;double;application/json
-Estado;Realiza a consulta do estado do dispositivo;boolean;application/json
-Reiniciar;Reinicia o dispositivo;string;application/json
-Comandos;Retorna a lista de comandos do dispositivo;string;application/json
-Descrição; Retorna a descrição do dispositivo;string;application/json
-
+Ler Valor; Realiza o valor de leitura do dispositivo;double; application / json
+Estado; Realiza a consulta do estado do dispositivo;boolean; application / json
+Reiniciar; Reinicia o dispositivo; string; application / json
+Comandos; Retorna a lista de comandos do dispositivo;string; application / json
+Descrição; Retorna a descrição do dispositivo;string; application / json

@@ -29,6 +29,7 @@ namespace IoTDevice
 
         private static void InitializeDevices()
         {
+
             var deviceConfigs = BaseConfigurations.LoadDeviceConfigs();
 
             foreach (var config in deviceConfigs)
@@ -42,6 +43,7 @@ namespace IoTDevice
         {
             var stringWrap = config.Url.Split(':');
             string ip = stringWrap[0];
+
             if (ip == "localhost")
                 ip = "127.0.0.1";
 

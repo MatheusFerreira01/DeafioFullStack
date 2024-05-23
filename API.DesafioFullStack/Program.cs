@@ -1,15 +1,14 @@
 using API.DesafioFullStack.Interface;
-using API.DesafioFullStack.Repository;
 using API.DesafioFullStack.Services;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.OpenApi.Models;
+using Swashbuckle.AspNetCore.SwaggerGen;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 
 builder.Services.AddScoped<IDeviceInterface, DeviceRespository>();
-builder.Services.AddScoped<IUserConfigInterface, UserConfigRepository>();
 
 
 builder.Services.AddEndpointsApiExplorer();
@@ -54,6 +53,7 @@ builder.Services.AddSwaggerGen(options =>
     var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
     options.IncludeXmlComments(xmlPath);
 });
+
 
 
 var app = builder.Build();

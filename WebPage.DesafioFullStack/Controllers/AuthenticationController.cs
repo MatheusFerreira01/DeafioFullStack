@@ -26,9 +26,6 @@ public class AuthenticationController : Controller
     [HttpPost("SendLogin")]
     public async Task<IActionResult> Login(LoginModel loginModel)
     {
-        //TODO TIRAR DEPOIS
-        loginModel.Username = "matheus";
-        loginModel.Password = "password";
         if (string.IsNullOrEmpty(loginModel.Username) || string.IsNullOrEmpty(loginModel.Password))
         {
             ViewBag.Error = "Username and password are required.";
@@ -43,23 +40,33 @@ public class AuthenticationController : Controller
 
         client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Basic", authHeaderValue);
 
-        var response = await client.GetAsync("https://localhost:7078/Device");
-        response.EnsureSuccessStatusCode();
+        var response = await client.GetAsync(CommonApi.DFSApiUrl+ CommonApi.DFSGetListDevicesRoute);       
 
         if (!response.IsSuccessStatusCode)
         {
-            ViewBag.Error = "Invalid credentials.";
+            ViewBag.Error = "Usuario e senha invalidos";
             return View();
         }
 
         HttpContext.Session.SetString("AuthenticationToken", authHeaderValue);
-        return RedirectToAction("Index", "Home");
+
+        var userProfile = UserManagerIntegration.GetUsers().Where(x=> x.Username == loginModel.Username).FirstOrDefault();
+
+        bool isAdmin = false;
+
+        if (userProfile.Profile == "ADMINISTRADOR")
+        {
+            isAdmin = true;
+        }
+        TempData["IsAdmin"] = isAdmin;
+        TempData["FullName"] = userProfile.FullName ;
+        return RedirectToAction("Index","Home");
     }   
 
     [HttpGet]
     public IActionResult Logout()
     {
-        HttpContext.Session.Remove("User");
+        HttpContext.Session.Remove("AuthenticationToken");
         return RedirectToAction("Login");
     }
 }
