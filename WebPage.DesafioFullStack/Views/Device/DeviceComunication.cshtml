@@ -1,0 +1,227 @@
+﻿@using Newtonsoft.Json
+@model DeviceCommunicationPageModel
+@{
+    ViewBag.Title = "DeviceCommunication";
+}
+
+<h2>Dashboard</h2>
+
+
+<div class="row">
+    <div class="col-md-6">
+        <textarea class="form-control" rows="10" readonly>@Model.ResultCommandSender</textarea>
+    </div>
+    <div class="col-md-3">
+        <canvas id="myChart" width="400" height="400"></canvas>
+    </div>
+</div>
+
+<div class="row mt-3">
+    <div class="col-md-12">
+        <form asp-controller="Device" asp-action="SubmitCommand" method="post">
+            @for (int i = 0; i < Model.SelectedDevices.Count; i++)
+            {
+                var device = Model.SelectedDevices[i];
+                <td>
+                    <input type="hidden" name="SelectedDevices[@i].Identifier" value="@device.Identifier" />
+                    <input type="hidden" name="SelectedDevices[@i].Description" value="@device.Description" />
+                    <input type="hidden" name="SelectedDevices[@i].Manufacturer" value="@device.Manufacturer" />
+                    <input type="hidden" name="SelectedDevices[@i].RainVolume" value="@device.RainVolume" />
+                    <input type="hidden" name="SelectedDevices[@i].Url" value="@device.Url" />
+                </td>
+            }
+            @for (int i = 0; i < Model.CommandsList.Count; i++)
+            {
+                var command = Model.CommandsList[i];
+                <td>
+                    <input type="hidden" name="CommandsList[@i].Operation" value="@command.Operation" />
+                    <input type="hidden" name="CommandsList[@i].Description" value="@command.Description" />
+                    <input type="hidden" name="CommandsList[@i].Format" value="@command.Format" />
+                    <input type="hidden" name="CommandsList[@i].Result" value="@command.Result" />
+                    <input type="hidden" name="CommandsList[@i].Tittle" value="@command.Tittle" />
+                </td>
+            }
+            <select class="form-control" name="SelectedCommand">
+                <option value="">Selecione um Comando</option>
+                @foreach (var device in Model.CommandsList)
+                {
+                    <option value="@device.Operation">@device.Tittle</option>
+                }
+            </select>
+            <input type="hidden" name="RefererLastPage" value="@Model.RefererLastPage" />
+            <button type="submit" class="btn btn-primary mt-3">Enviar</button>
+        </form>
+        <a class="btn btn-primary mt-3" href="@Url.Action("BackScreen", "Device",Model)">Voltar</a>
+    </div>
+</div>
+
+<div class="row mt-3">
+    <div class="col-md-12">
+        <div class="form-group">
+            <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" id="realTimeToggle">
+                <label class="form-check-label" for="realTimeToggle">Tempo Real</label>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@section Scripts {
+    <script>
+
+        var intervalId;
+        var myChart;
+        var loadingMessage = document.createElement('p');
+        var ctx = document.getElementById('myChart').getContext('2d');  
+
+        document.getElementById('realTimeToggle').addEventListener('change', function () {
+            handleRealTimeToggle(this.checked);
+
+            if (this.checked) {
+                loadingMessage.textContent = 'Carregando...';
+                document.body.appendChild(loadingMessage);
+                intervalId = setInterval(enviarSolicitacao, 1500);
+            } else {
+                clearInterval(intervalId);
+            }
+        });
+
+        function enviarSolicitacao() {
+            
+            var pageObject = @Html.Raw(JsonConvert.SerializeObject(Model));
+
+            var pageJson = JSON.stringify(pageObject);
+            var pageModel = pageJson;
+
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST', '/Device/RealTimeData', true);
+            xhr.setRequestHeader('Content-Type', 'application/json');
+
+            xhr.onload = function () {
+                if (xhr.status >= 200 && xhr.status < 300) {
+                    var response = JSON.parse(xhr.responseText);
+                    if (response.success) {
+                        loadingMessage.textContent = '';
+                        updateChart(response.chartLabelsSerialized);
+                    } else {
+                        console.error('Erro na resposta do servidor:', response.message);
+                    }
+                } else {
+                    console.error('Erro ao processar a solicitação:', xhr.statusText);
+                }
+            };
+
+            xhr.onerror = function () {
+                console.error('Erro na solicitação.');
+            };
+
+            xhr.send(JSON.stringify(pageModel));
+            console.log('Enviando solicitação...');
+        }
+
+        function updateChart(pageModel) { 
+            var deviceDataList = JSON.parse(pageModel);
+            var labels = [];
+            var data = [];
+            var backgroundColors = [];
+
+            for (var i = 0; i < deviceDataList.length; i++) {
+
+                labels.push(deviceDataList[i].DeviceName);
+                data.push(deviceDataList[i].Data);
+                backgroundColors.push(deviceDataList[i].Color);
+            }
+
+            if (!myChart) {
+                console.log("Entrou no Chart")
+                myChart = new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: labels,
+                        datasets: [{
+                            label: 'Volume da Chuva',
+                            data: data,
+                            backgroundColor: backgroundColors,
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        scales: {
+                            yAxes: [{
+                                ticks: {
+                                    beginAtZero: true
+                                }
+                            }]
+                        }
+                    }
+                });
+            }
+            else {
+                myChart.data.labels = labels;
+                myChart.data.datasets[0].data = data;
+                myChart.update();
+            }
+        }
+
+        function handleRealTimeToggle(isChecked) {
+            var enviarButton = document.querySelector('button[type="submit"]');
+            var resultTextArea = document.querySelector('textarea.form-control');
+
+            if (isChecked) {
+                enviarButton.disabled = true;
+                resultTextArea.value = "Dados sendo gerados automaticamente...";
+            }
+            else {
+                enviarButton.disabled = false;
+            }
+        }
+        
+        var deviceDataList = @Html.Raw(Model.ChartLabelsSerialized);
+        
+        if (deviceDataList != null) {
+
+            var labels = [];
+            var data = [];
+            var backgroundColors = [];
+            console.log(deviceDataList);
+            for (var i = 0; i < deviceDataList.length; i++) {    
+                labels.push(deviceDataList[i].DeviceName);
+                data.push(deviceDataList[i].Data);
+                backgroundColors.push(deviceDataList[i].Color);
+            }
+
+            if (!myChart) {
+                console.log("Entrou no Chart")
+                myChart = new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: labels,
+                        datasets: [{
+                            label: 'Volume da Chuva',
+                            data: data,
+                            backgroundColor: backgroundColors,
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        scales: {
+                            yAxes: [{
+                                ticks: {
+                                    beginAtZero: true
+                                }
+                            }]
+                        }
+                    }
+                });
+            }
+            else {
+                myChart.data.labels = labels;
+                myChart.data.datasets[0].data = data;
+                myChart.update();
+            }
+        }
+
+    </script>
+}
+

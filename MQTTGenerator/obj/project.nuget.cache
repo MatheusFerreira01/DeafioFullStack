@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "/7wPl1Kpi30nCXjvBEGBLo1EPTpBrzuUYDl0ROEJmPFmZ/vvctmvgNxZmIiczQjKPNFTNfu2sc5WIm9azkQn3Q==",
+  "success": true,
+  "projectFilePath": "D:\\Projetos\\Desafio FullStack\\Desenvolvimento\\DesafioFullStack\\MQTTGenerator\\DevicesGenerator.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Windows 11 Pro UFFI\\.nuget\\packages\\csvhelper\\32.0.3\\csvhelper.32.0.3.nupkg.sha512",
+    "C:\\Users\\Windows 11 Pro UFFI\\.nuget\\packages\\hivemqtt\\0.10.0\\hivemqtt.0.10.0.nupkg.sha512",
+    "C:\\Users\\Windows 11 Pro UFFI\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.1\\microsoft.extensions.logging.abstractions.7.0.1.nupkg.sha512",
+    "C:\\Users\\Windows 11 Pro UFFI\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
+    "C:\\Users\\Windows 11 Pro UFFI\\.nuget\\packages\\nlog\\5.2.3\\nlog.5.2.3.nupkg.sha512",
+    "C:\\Users\\Windows 11 Pro UFFI\\.nuget\\packages\\system.io.pipelines\\7.0.0\\system.io.pipelines.7.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34728.123
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shared.DataBase.DesafioFullStack", "Shared.DataBase.DesafioFullStack\Shared.DataBase.DesafioFullStack.csproj", "{414F4358-9451-4CC9-A895-EA6E456B2EDC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebPage.DesafioFullStack", "WebPage.DesafioFullStack\WebPage.DesafioFullStack.csproj", "{980C2F52-D8B4-4646-AAF7-BF8E50182E1C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shared.Models.DesafioFullStack", "Shared.Models.DesafioFullStack\Shared.Models.DesafioFullStack.csproj", "{616538F4-D655-4699-B160-1FF769FA6AEF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "API.DesafioFullStack", "API.DesafioFullStack\API.DesafioFullStack.csproj", "{7074234D-6A96-4BD7-8F17-C8807686815A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DevicesGenerator", "MQTTGenerator\DevicesGenerator.csproj", "{1A1C80C1-7BAF-4582-B1AC-50F7F7B5E17E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{414F4358-9451-4CC9-A895-EA6E456B2EDC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{414F4358-9451-4CC9-A895-EA6E456B2EDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{414F4358-9451-4CC9-A895-EA6E456B2EDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{414F4358-9451-4CC9-A895-EA6E456B2EDC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{980C2F52-D8B4-4646-AAF7-BF8E50182E1C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{980C2F52-D8B4-4646-AAF7-BF8E50182E1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{980C2F52-D8B4-4646-AAF7-BF8E50182E1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{980C2F52-D8B4-4646-AAF7-BF8E50182E1C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{616538F4-D655-4699-B160-1FF769FA6AEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{616538F4-D655-4699-B160-1FF769FA6AEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{616538F4-D655-4699-B160-1FF769FA6AEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{616538F4-D655-4699-B160-1FF769FA6AEF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7074234D-6A96-4BD7-8F17-C8807686815A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7074234D-6A96-4BD7-8F17-C8807686815A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7074234D-6A96-4BD7-8F17-C8807686815A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7074234D-6A96-4BD7-8F17-C8807686815A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A1C80C1-7BAF-4582-B1AC-50F7F7B5E17E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A1C80C1-7BAF-4582-B1AC-50F7F7B5E17E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A1C80C1-7BAF-4582-B1AC-50F7F7B5E17E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A1C80C1-7BAF-4582-B1AC-50F7F7B5E17E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D777BEDC-7B0A-44D3-BBC3-60633819F991}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,25 @@
+Identifier;Description;Manufacturer;Url
+2;Dispositivo Virtual 02;TestsLTDA;localhost:8002
+3;Dispositivo Virtual 03;TestsLTDA;localhost:8003
+4;Dispositivo Virtual 04;TestsLTDA;localhost:8004
+5;Dispositivo Virtual 05;TestsLTDA;localhost:8005
+6;Dispositivo Virtual 06;TestsLTDA;localhost:8006
+7;Dispositivo Virtual 07;TestsLTDA;localhost:8007
+8;Dispositivo Virtual 08;TestsLTDA;localhost:8008
+9;Dispositivo Virtual 09;TestsLTDA;localhost:8009
+10;Dispositivo Virtual 10;TestsLTDA;localhost:8010
+11;Dispositivo Virtual 11;TestsLTDA;localhost:8011
+12;Dispositivo Virtual 12;TestsLTDA;localhost:8012
+13;Dispositivo Virtual 13;TestsLTDA;localhost:8013
+14;Dispositivo Virtual 14;TestsLTDA;localhost:8014
+15;Dispositivo Virtual 15;TestsLTDA;localhost:8015
+16;Dispositivo Virtual 16;TestsLTDA;localhost:8016
+17;Dispositivo Virtual 17;TestsLTDA;localhost:8017
+18;Dispositivo Virtual 18;TestsLTDA;localhost:8018
+19;Dispositivo Virtual 19;TestsLTDA;localhost:8019
+20;Dispositivo Virtual 20;TestsLTDA;localhost:8020
+21;Teste de Criação;TestLTDA;localhost:8021
+22;Teste de Criação 02;TestLTDA;localhost:8022
+23;Teste de Criação 04;TestLTDA;localhost:8023
+string;Teste de Criação;TestsLTDA;localhost:8025
+

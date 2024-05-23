@@ -1,0 +1,30 @@
+﻿@model Shared.Models.DesafioFullStack.Authentication.LoginModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Login</title>
+</head>
+<body>
+    <div>
+        <h2>Login</h2>
+        <form asp-action="SendLogin" method="post">
+            <label for="username">Usuario:</label>
+            <input type="text" id="username" name="username" /><br />
+            <label for="password">Senha:</label>
+            <input type="password" id="password" name="password" /><br />
+            <input type="submit" value="Login" />
+        </form>
+        @if (ViewBag.Error != null)
+        {
+            <div style="color:red">@ViewBag.Error</div>
+        }
+    </div>
+</body>
+</html>
+

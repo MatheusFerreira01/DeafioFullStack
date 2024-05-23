@@ -1,0 +1,12 @@
+D:\Projetos\Desafio FullStack\Desenvolvimento\DesafioFullStack\Shared.Models.DesafioFullStack\bin\Debug\net8.0\Shared.Models.DesafioFullStack.deps.json
+D:\Projetos\Desafio FullStack\Desenvolvimento\DesafioFullStack\Shared.Models.DesafioFullStack\bin\Debug\net8.0\Shared.Models.DesafioFullStack.dll
+D:\Projetos\Desafio FullStack\Desenvolvimento\DesafioFullStack\Shared.Models.DesafioFullStack\bin\Debug\net8.0\Shared.Models.DesafioFullStack.pdb
+D:\Projetos\Desafio FullStack\Desenvolvimento\DesafioFullStack\Shared.Models.DesafioFullStack\obj\Debug\net8.0\Shared.Models.DesafioFullStack.csproj.AssemblyReference.cache
+D:\Projetos\Desafio FullStack\Desenvolvimento\DesafioFullStack\Shared.Models.DesafioFullStack\obj\Debug\net8.0\Shared.Models.DesafioFullStack.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projetos\Desafio FullStack\Desenvolvimento\DesafioFullStack\Shared.Models.DesafioFullStack\obj\Debug\net8.0\Shared.Models.DesafioFullStack.AssemblyInfoInputs.cache
+D:\Projetos\Desafio FullStack\Desenvolvimento\DesafioFullStack\Shared.Models.DesafioFullStack\obj\Debug\net8.0\Shared.Models.DesafioFullStack.AssemblyInfo.cs
+D:\Projetos\Desafio FullStack\Desenvolvimento\DesafioFullStack\Shared.Models.DesafioFullStack\obj\Debug\net8.0\Shared.Models.DesafioFullStack.csproj.CoreCompileInputs.cache
+D:\Projetos\Desafio FullStack\Desenvolvimento\DesafioFullStack\Shared.Models.DesafioFullStack\obj\Debug\net8.0\Shared.Models.DesafioFullStack.dll
+D:\Projetos\Desafio FullStack\Desenvolvimento\DesafioFullStack\Shared.Models.DesafioFullStack\obj\Debug\net8.0\refint\Shared.Models.DesafioFullStack.dll
+D:\Projetos\Desafio FullStack\Desenvolvimento\DesafioFullStack\Shared.Models.DesafioFullStack\obj\Debug\net8.0\Shared.Models.DesafioFullStack.pdb
+D:\Projetos\Desafio FullStack\Desenvolvimento\DesafioFullStack\Shared.Models.DesafioFullStack\obj\Debug\net8.0\ref\Shared.Models.DesafioFullStack.dll

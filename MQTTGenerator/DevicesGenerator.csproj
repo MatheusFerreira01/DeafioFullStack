@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="HiveMQtt" Version="0.10.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Shared.DataBase.DesafioFullStack\Shared.DataBase.DesafioFullStack.csproj" />
+    <ProjectReference Include="..\Shared.Models.DesafioFullStack\Shared.Models.DesafioFullStack.csproj" />
+  </ItemGroup>
+
+</Project>

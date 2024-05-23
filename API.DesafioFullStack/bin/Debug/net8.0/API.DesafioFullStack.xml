@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>API.DesafioFullStack</name>
+    </assembly>
+    <members>
+        <member name="M:Controllers.DeviceController.GetListDevices">
+            <summary>
+            Obtém a lista de dispositivos.
+            </summary>
+            <returns>Uma lista de dispositivos.</returns>
+            <response code="200">Requisição executada com sucesso</response>
+            <response code="401">As credenciais fornecidas pelo usuário são inexistentes ou inválidas</response>
+        </member>
+    </members>
+</doc>

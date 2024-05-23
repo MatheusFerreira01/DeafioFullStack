@@ -1,0 +1,67 @@
+﻿@model List<DeviceSelector>
+@{
+    ViewBag.Title = "Dispositivos";
+}
+
+<h2>Dispositivos Cadastrados</h2>
+
+@using (Html.BeginForm("ShowDeviceComunication", "Device", FormMethod.Post, new { id = "deviceForm" }))
+{
+        <h2>Dispositivos Cadastrados</h2>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col"><input type="checkbox" id="selectAll" /> Selecionar Todos</th>
+                    <th scope="col">Nome do Dispositivo</th>
+                    <th scope="col">Descrição</th>
+                    <th scope="col">Fabricante</th>
+                </tr>
+            </thead>
+            <tbody>
+                @for (int i = 0; i < Model.Count; i++)
+                {
+                    var device = Model[i];
+                    <tr>
+                        <td>
+                            <input type="checkbox" name="devices[@i].IsSelected" value="true" class="deviceCheckbox" />
+                            <input type="hidden" name="devices[@i].Identifier" value="@device.Identifier" />
+                            <input type="hidden" name="devices[@i].Description" value="@device.Description" />
+                            <input type="hidden" name="devices[@i].Manufacturer" value="@device.Manufacturer" />
+                            <input type="hidden" name="devices[@i].Url" value="@device.Url" />
+                        </td>
+                        <td>@device.Identifier</td>
+                        <td>@device.Description</td>
+                        <td>@device.Manufacturer</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+        <div id="error-message" class="alert alert-warning d-none" role="alert">
+            Você deve selecionar pelo menos um dispositivo.
+        </div>
+        <button type="submit" class="btn btn-primary">Consultar</button>
+}
+
+
+@section Scripts {
+    <script>
+        document.getElementById('deviceForm').addEventListener('submit', function (event) {
+            var checkboxes = document.querySelectorAll('input[type="checkbox"][name^="devices"]:checked');
+            var errorMessage = document.getElementById('error-message');
+
+            if (checkboxes.length === 0) {
+                event.preventDefault();
+                errorMessage.classList.remove('d-none');
+                errorMessage.textContent = 'Você deve selecionar pelo menos um dispositivo.';
+            } else {
+                errorMessage.classList.add('d-none');
+            }
+        });
+        document.getElementById('selectAll').addEventListener('change', function (event) {
+            var checkboxes = document.querySelectorAll('.deviceCheckbox');
+            checkboxes.forEach(function (checkbox) {
+                checkbox.checked = event.target.checked;
+            });
+        });
+    </script>
+}

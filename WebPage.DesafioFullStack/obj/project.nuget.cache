@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "dgSpecHash": "qJihtr2nq4VsoFa4+dTV/6ZbhIYjZTnVe0T+7LfC42EX6xekyb7PVmpB41jTKJniYlizrgs8A2OGDtcp4JPdgw==",
+  "success": true,
+  "projectFilePath": "D:\\Projetos\\Desafio FullStack\\Desenvolvimento\\DesafioFullStack\\WebPage.DesafioFullStack\\WebPage.DesafioFullStack.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Windows 11 Pro UFFI\\.nuget\\packages\\csvhelper\\32.0.3\\csvhelper.32.0.3.nupkg.sha512",
+    "C:\\Users\\Windows 11 Pro UFFI\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\5.0.0\\microsoft.extensions.dependencyinjection.5.0.0.nupkg.sha512",
+    "C:\\Users\\Windows 11 Pro UFFI\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\5.0.0\\microsoft.extensions.dependencyinjection.abstractions.5.0.0.nupkg.sha512",
+    "C:\\Users\\Windows 11 Pro UFFI\\.nuget\\packages\\microsoft.extensions.http\\5.0.0\\microsoft.extensions.http.5.0.0.nupkg.sha512",
+    "C:\\Users\\Windows 11 Pro UFFI\\.nuget\\packages\\microsoft.extensions.logging\\5.0.0\\microsoft.extensions.logging.5.0.0.nupkg.sha512",
+    "C:\\Users\\Windows 11 Pro UFFI\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\5.0.0\\microsoft.extensions.logging.abstractions.5.0.0.nupkg.sha512",
+    "C:\\Users\\Windows 11 Pro UFFI\\.nuget\\packages\\microsoft.extensions.options\\5.0.0\\microsoft.extensions.options.5.0.0.nupkg.sha512",
+    "C:\\Users\\Windows 11 Pro UFFI\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.0\\microsoft.extensions.primitives.5.0.0.nupkg.sha512",
+    "C:\\Users\\Windows 11 Pro UFFI\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

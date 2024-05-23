@@ -1,0 +1,414 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Retyped.paho-mqtt</name>
+    </assembly>
+    <members>
+        <!-- Badly formed XML comment ignored for member "T:Retyped.paho_mqtt.Paho.MQTT" -->
+        <member name="P:Retyped.paho_mqtt.Paho.MQTT.MQTTError.errorCode">
+            <summary>
+            A number indicating the nature of the error.
+            </summary>
+        </member>
+        <member name="P:Retyped.paho_mqtt.Paho.MQTT.MQTTError.errorMessage">
+            <summary>
+            Text describing the error
+            </summary>
+        </member>
+        <member name="P:Retyped.paho_mqtt.Paho.MQTT.WithInvocationContext.Interface.invocationContext">
+            <summary>
+            <code>invocationContext</code> as passed in with the corresponding field in the connectOptions or
+            subscribeOptions.
+            </summary>
+        </member>
+        <member name="P:Retyped.paho_mqtt.Paho.MQTT.WithInvocationContext.invocationContext">
+            <summary>
+            <code>invocationContext</code> as passed in with the corresponding field in the connectOptions or
+            subscribeOptions.
+            </summary>
+        </member>
+        <member name="P:Retyped.paho_mqtt.Paho.MQTT.ErrorWithInvocationContext.invocationContext">
+            <summary>
+            <code>invocationContext</code> as passed in with the corresponding field in the connectOptions or
+            subscribeOptions.
+            </summary>
+        </member>
+        <member name="T:Retyped.paho_mqtt.Paho.MQTT.ConnectionOptions">
+            <summary>
+            Attributes used with a connection.
+            </summary>
+        </member>
+        <member name="P:Retyped.paho_mqtt.Paho.MQTT.ConnectionOptions.timeout">
+            <summary>
+            If the connect has not succeeded within this number of seconds, it is deemed to have failed.
+            @default The default is 30 seconds.
+            </summary>
+        </member>
+        <member name="P:Retyped.paho_mqtt.Paho.MQTT.ConnectionOptions.userName">
+            <summary>
+            Authentication username for this connection.
+            </summary>
+        </member>
+        <member name="P:Retyped.paho_mqtt.Paho.MQTT.ConnectionOptions.password">
+            <summary>
+            Authentication password for this connection.
+            </summary>
+        </member>
+        <member name="P:Retyped.paho_mqtt.Paho.MQTT.ConnectionOptions.willMessage">
+            <summary>
+            Sent by the server when the client disconnects abnormally.
+            </summary>
+        </member>
+        <member name="P:Retyped.paho_mqtt.Paho.MQTT.ConnectionOptions.keepAliveInterval">
+            <summary>
+            The server disconnects this client if there is no activity for this number of seconds.
+            @default The default value of 60 seconds is assumed if not set.
+            </summary>
+        </member>
+        <member name="P:Retyped.paho_mqtt.Paho.MQTT.ConnectionOptions.cleanSession">
+            <summary>
+            If true(default) the client and server persistent state is deleted on successful connect.
+            @default true
+            </summary>
+        </member>
+        <member name="P:Retyped.paho_mqtt.Paho.MQTT.ConnectionOptions.useSSL">
+            <summary>
+            If present and true, use an SSL Websocket connection.
+            </summary>
+        </member>
+        <member name="P:Retyped.paho_mqtt.Paho.MQTT.ConnectionOptions.invocationContext">
+            <summary>
+            Passed to the onSuccess callback or onFailure callback.
+            </summary>
+        </member>
+        <member name="P:Retyped.paho_mqtt.Paho.MQTT.ConnectionOptions.onSuccess">
+            <summary>
+            Called when the connect acknowledgement has been received from the server.
+            </summary>
+        </member>
+        <member name="P:Retyped.paho_mqtt.Paho.MQTT.ConnectionOptions.mqttVersion">
+            <summary>
+            Specifies the mqtt version to use when connecting
+            <dl>
+            <dt>3 - MQTT 3.1</dt>
+            <dt>4 - MQTT 3.1.1 (default)</dt>
+            </dl>
+            @default 4
+            </summary>
+        </member>
+        <member name="P:Retyped.paho_mqtt.Paho.MQTT.ConnectionOptions.onFailure">
+            <summary>
+            Called when the connect request has failed or timed out.
+            </summary>
+        </member>
+        <member name="P:Retyped.paho_mqtt.Paho.MQTT.ConnectionOptions.hosts">
+            <summary>
+            If present this contains either a set of hostnames or fully qualified
+            WebSocket URIs (ws://example.com:1883/mqtt), that are tried in order in place of the host and port
+            paramater on the construtor. The hosts are tried one at at time in order until one of then succeeds.
+            </summary>
+        </member>
+        <member name="P:Retyped.paho_mqtt.Paho.MQTT.ConnectionOptions.ports">
+            <summary>
+            If present the set of ports matching the hosts. If hosts contains URIs, this property is not used.
+            </summary>
+        </member>
+        <member name="T:Retyped.paho_mqtt.Paho.MQTT.SubscribeOptions">
+            <summary>
+            Used to control a subscription
+            </summary>
+        </member>
+        <member name="P:Retyped.paho_mqtt.Paho.MQTT.SubscribeOptions.qos">
+            <summary>
+            the maximum qos of any publications sent as a result of making this subscription.
+            </summary>
+        </member>
+        <member name="P:Retyped.paho_mqtt.Paho.MQTT.SubscribeOptions.invocationContext">
+            <summary>
+            passed to the onSuccess callback or onFailure callback.
+            </summary>
+        </member>
+        <member name="P:Retyped.paho_mqtt.Paho.MQTT.SubscribeOptions.onSuccess">
+            <summary>
+            called when the subscribe acknowledgement has been received from the server.
+            </summary>
+        </member>
+        <member name="P:Retyped.paho_mqtt.Paho.MQTT.SubscribeOptions.onFailure">
+            <summary>
+            called when the subscribe request has failed or timed out.
+            </summary>
+        </member>
+        <member name="P:Retyped.paho_mqtt.Paho.MQTT.SubscribeOptions.timeout">
+            <summary>
+            timeout which, if present, determines the number of seconds after which the onFailure calback is called.
+            The presence of a timeout does not prevent the onSuccess callback from being called when the subscribe
+            completes.
+            </summary>
+        </member>
+        <member name="P:Retyped.paho_mqtt.Paho.MQTT.UnsubscribeOptions.invocationContext">
+            <summary>
+            passed to the onSuccess callback or onFailure callback.
+            </summary>
+        </member>
+        <member name="P:Retyped.paho_mqtt.Paho.MQTT.UnsubscribeOptions.onSuccess">
+            <summary>
+            called when the unsubscribe acknowledgement has been received from the server.
+            </summary>
+        </member>
+        <member name="P:Retyped.paho_mqtt.Paho.MQTT.UnsubscribeOptions.onFailure">
+            <summary>
+            called when the unsubscribe request has failed or timed out.
+            </summary>
+        </member>
+        <member name="P:Retyped.paho_mqtt.Paho.MQTT.UnsubscribeOptions.timeout">
+            <summary>
+            timeout which, if present, determines the number of seconds after which the onFailure calback is called.
+            The presence of a timeout does not prevent the onSuccess callback from being called when the unsubscribe
+            completes.
+            </summary>
+        </member>
+        <member name="T:Retyped.paho_mqtt.Paho.MQTT.Client">
+            <summary>
+            The JavaScript application communicates to the server using a {@link Paho.MQTT.Client} object.
+            Most applications will create just one Client object and then call its connect() method,
+            however applications can create more than one Client object if they wish.
+            In this case the combination of host, port and clientId attributes must be different for each Client object.
+            The send, subscribe and unsubscribe methods are implemented as asynchronous JavaScript methods
+            (even though the underlying protocol exchange might be synchronous in nature).
+            This means they signal their completion by calling back to the application,
+            via Success or Failure callback functions provided by the application on the method in question.
+            Such callbacks are called at most once per method invocation and do not persist beyond the lifetime
+            of the script that made the invocation.
+            In contrast there are some callback functions, most notably {@link onMessageArrived},
+            that are defined on the {@link Paho.MQTT.Client} object.
+            These may get called multiple times, and aren't directly related to specific method invocations made by the
+            client.
+            </summary>
+        </member>
+        <member name="P:Retyped.paho_mqtt.Paho.MQTT.Client.clientId">
+            <summary>
+            used when connecting to the server.
+            </summary>
+        </member>
+        <member name="P:Retyped.paho_mqtt.Paho.MQTT.Client.host">
+            <summary>
+            the server's DNS hostname or dotted decimal IP address.
+            </summary>
+        </member>
+        <member name="P:Retyped.paho_mqtt.Paho.MQTT.Client.path">
+            <summary>
+            the server's path.
+            </summary>
+        </member>
+        <member name="P:Retyped.paho_mqtt.Paho.MQTT.Client.port">
+            <summary>
+            the server's port.
+            </summary>
+        </member>
+        <member name="P:Retyped.paho_mqtt.Paho.MQTT.Client.trace">
+            <summary>
+            function called with trace information, if set
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:Retyped.paho_mqtt.Paho.MQTT.Client.onConnectionLost" -->
+        <!-- Badly formed XML comment ignored for member "P:Retyped.paho_mqtt.Paho.MQTT.Client.onMessageDelivered" -->
+        <!-- Badly formed XML comment ignored for member "P:Retyped.paho_mqtt.Paho.MQTT.Client.onMessageArrived" -->
+        <member name="M:Retyped.paho_mqtt.Paho.MQTT.Client.#ctor(System.String,System.Double,System.String,System.String)">
+            <param name = "host">the address of the messaging server as a DNS name or dotted decimal IP address.</param>
+            <param name = "port">the port number to connect to</param>
+            <param name = "path">the path on the host to connect to - only used if host is not a URI. Default: '/mqtt'.</param>
+            <param name = "clientId">the Messaging client identifier, between 1 and 23 characters in length.</param>
+        </member>
+        <member name="M:Retyped.paho_mqtt.Paho.MQTT.Client.#ctor(System.String,System.Double,System.String)">
+            <param name = "host">the address of the messaging server as a DNS name or dotted decimal IP address.</param>
+            <param name = "port">the port number to connect to</param>
+            <param name = "clientId">the Messaging client identifier, between 1 and 23 characters in length.</param>
+        </member>
+        <member name="M:Retyped.paho_mqtt.Paho.MQTT.Client.#ctor(System.String,System.String)">
+            <param name = "hostUri">the address of the messaging server as a fully qualified WebSocket URI</param>
+            <param name = "clientId">the Messaging client identifier, between 1 and 23 characters in length.</param>
+        </member>
+        <member name="M:Retyped.paho_mqtt.Paho.MQTT.Client.connect">
+            <summary>
+            Connect this Messaging client to its server.
+            </summary>
+            <exception cref = "!:InvalidState">
+            if the client is not in disconnected state. The client must have received
+            connectionLost or disconnected before calling connect for a second or subsequent time.
+            </exception>
+        </member>
+        <member name="M:Retyped.paho_mqtt.Paho.MQTT.Client.connect(Retyped.paho_mqtt.Paho.MQTT.ConnectionOptions)">
+            <summary>
+            Connect this Messaging client to its server.
+            </summary>
+            <exception cref = "!:InvalidState">
+            if the client is not in disconnected state. The client must have received
+            connectionLost or disconnected before calling connect for a second or subsequent time.
+            </exception>
+        </member>
+        <member name="M:Retyped.paho_mqtt.Paho.MQTT.Client.disconnect">
+            <summary>
+            Normal disconnect of this Messaging client from its server.
+            </summary>
+            <exception cref = "!:InvalidState">if the client is already disconnected.</exception>
+        </member>
+        <member name="M:Retyped.paho_mqtt.Paho.MQTT.Client.isConnected">
+            <returns>True if the client is currently connected</returns>
+        </member>
+        <member name="M:Retyped.paho_mqtt.Paho.MQTT.Client.getTraceLog">
+            <summary>
+            Get the contents of the trace log.
+            </summary>
+            <returns>tracebuffer containing the time ordered trace records.</returns>
+        </member>
+        <member name="M:Retyped.paho_mqtt.Paho.MQTT.Client.startTrace">
+            <summary>
+            Start tracing.
+            </summary>
+        </member>
+        <member name="M:Retyped.paho_mqtt.Paho.MQTT.Client.stopTrace">
+            <summary>
+            Stop tracing.
+            </summary>
+        </member>
+        <member name="M:Retyped.paho_mqtt.Paho.MQTT.Client.send(Retyped.paho_mqtt.Paho.MQTT.Message)">
+            <summary>
+            Send a message to the consumers of the destination in the Message.
+            </summary>
+            <param name = "message"><b>mandatory</b> The {@link Paho.MQTT.Message} object to be sent.</param>
+            <exception cref = "!:InvalidState">if the client is not connected.</exception>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:Retyped.paho_mqtt.Paho.MQTT.Client.send(System.String,Bridge.Union{System.String,Retyped.es5.ArrayBuffer})" -->
+        <!-- Badly formed XML comment ignored for member "M:Retyped.paho_mqtt.Paho.MQTT.Client.send(System.String,System.String)" -->
+        <!-- Badly formed XML comment ignored for member "M:Retyped.paho_mqtt.Paho.MQTT.Client.send(System.String,Retyped.es5.ArrayBuffer)" -->
+        <!-- Badly formed XML comment ignored for member "M:Retyped.paho_mqtt.Paho.MQTT.Client.send(System.String,Bridge.Union{System.String,Retyped.es5.ArrayBuffer},Retyped.paho_mqtt.Paho.MQTT.Qos)" -->
+        <!-- Badly formed XML comment ignored for member "M:Retyped.paho_mqtt.Paho.MQTT.Client.send(System.String,System.String,Retyped.paho_mqtt.Paho.MQTT.Qos)" -->
+        <!-- Badly formed XML comment ignored for member "M:Retyped.paho_mqtt.Paho.MQTT.Client.send(System.String,Retyped.es5.ArrayBuffer,Retyped.paho_mqtt.Paho.MQTT.Qos)" -->
+        <!-- Badly formed XML comment ignored for member "M:Retyped.paho_mqtt.Paho.MQTT.Client.send(System.String,Bridge.Union{System.String,Retyped.es5.ArrayBuffer},Retyped.paho_mqtt.Paho.MQTT.Qos,System.Boolean)" -->
+        <!-- Badly formed XML comment ignored for member "M:Retyped.paho_mqtt.Paho.MQTT.Client.send(System.String,System.String,Retyped.paho_mqtt.Paho.MQTT.Qos,System.Boolean)" -->
+        <!-- Badly formed XML comment ignored for member "M:Retyped.paho_mqtt.Paho.MQTT.Client.send(System.String,Retyped.es5.ArrayBuffer,Retyped.paho_mqtt.Paho.MQTT.Qos,System.Boolean)" -->
+        <member name="M:Retyped.paho_mqtt.Paho.MQTT.Client.subscribe(System.String)">
+            <summary>
+            Subscribe for messages, request receipt of a copy of messages sent to the destinations described by the
+            filter.
+            </summary>
+            <param name = "filter">A filter describing the destinations to receive messages from.</param>
+            <exception cref = "!:InvalidState">if the client is not in connected state.</exception>
+        </member>
+        <member name="M:Retyped.paho_mqtt.Paho.MQTT.Client.subscribe(System.String,Retyped.paho_mqtt.Paho.MQTT.SubscribeOptions)">
+            <summary>
+            Subscribe for messages, request receipt of a copy of messages sent to the destinations described by the
+            filter.
+            </summary>
+            <param name = "filter">A filter describing the destinations to receive messages from.</param>
+            <param name = "subcribeOptions">Used to control the subscription</param>
+            <exception cref = "!:InvalidState">if the client is not in connected state.</exception>
+        </member>
+        <member name="M:Retyped.paho_mqtt.Paho.MQTT.Client.unsubscribe(System.String)">
+            <summary>
+            Unsubscribe for messages, stop receiving messages sent to destinations described by the filter.
+            </summary>
+            <param name = "filter">describing the destinations to receive messages from.</param>
+            <exception cref = "!:InvalidState">if the client is not in connected state.</exception>
+        </member>
+        <member name="M:Retyped.paho_mqtt.Paho.MQTT.Client.unsubscribe(System.String,Retyped.paho_mqtt.Paho.MQTT.UnsubscribeOptions)">
+            <summary>
+            Unsubscribe for messages, stop receiving messages sent to destinations described by the filter.
+            </summary>
+            <param name = "filter">describing the destinations to receive messages from.</param>
+            <exception cref = "!:InvalidState">if the client is not in connected state.</exception>
+        </member>
+        <member name="T:Retyped.paho_mqtt.Paho.MQTT.Message">
+            <summary>
+            An application message, sent or received.
+            </summary>
+        </member>
+        <member name="P:Retyped.paho_mqtt.Paho.MQTT.Message.destinationName">
+            <summary>
+            The name of the destination to which the message is to be sent
+            (for messages about to be sent) or the name of the destination from which the message has been received.
+            (for messages received by the onMessage function).
+            </summary>
+        </member>
+        <member name="P:Retyped.paho_mqtt.Paho.MQTT.Message.duplicate">
+            <summary>
+            If true, this message might be a duplicate of one which has already been received.
+            This is only set on messages received from the server.
+            </summary>
+        </member>
+        <member name="P:Retyped.paho_mqtt.Paho.MQTT.Message.payloadBytes">
+            <summary>
+            The payload.
+            </summary>
+            <returns>if payload is a string. Return the original otherwise.</returns>
+        </member>
+        <member name="P:Retyped.paho_mqtt.Paho.MQTT.Message.payloadString">
+            <summary>
+            The payload as a string if the payload consists of valid UTF-8 characters.
+            @throw {Error} if the payload is not valid UTF-8
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:Retyped.paho_mqtt.Paho.MQTT.Message.qos" -->
+        <member name="P:Retyped.paho_mqtt.Paho.MQTT.Message.retained">
+            <summary>
+            If true, the message is to be retained by the server and delivered to both current and future
+            subscriptions. If false the server only delivers the message to current subscribers, this is the default
+            for new Messages. A received message has the retained boolean set to true if the message was published
+            with the retained boolean set to true and the subscription was made after the message has been published.
+            @default false
+            </summary>
+        </member>
+        <member name="M:Retyped.paho_mqtt.Paho.MQTT.Message.#ctor(Bridge.Union{System.String,Retyped.es5.ArrayBuffer,Retyped.paho_mqtt.Paho.MQTT.TypedArray})">
+            <param name = "payload">The message data to be sent.</param>
+        </member>
+        <member name="M:Retyped.paho_mqtt.Paho.MQTT.Message.#ctor(System.String)">
+            <param name = "payload">The message data to be sent.</param>
+        </member>
+        <member name="M:Retyped.paho_mqtt.Paho.MQTT.Message.#ctor(Retyped.es5.ArrayBuffer)">
+            <param name = "payload">The message data to be sent.</param>
+        </member>
+        <member name="M:Retyped.paho_mqtt.Paho.MQTT.Message.#ctor(Retyped.paho_mqtt.Paho.MQTT.TypedArray)">
+            <param name = "payload">The message data to be sent.</param>
+        </member>
+        <member name="M:Retyped.paho_mqtt.Paho.MQTT.Message.#ctor(Bridge.Union{Retyped.es5.Int8Array,Retyped.es5.Uint8Array,Retyped.es5.Uint8ClampedArray,Retyped.es5.Int16Array,Retyped.es5.Uint16Array,Retyped.es5.Int32Array,Retyped.es5.Uint32Array,Retyped.es5.Float32Array,Retyped.es5.Float64Array})">
+            <param name = "payload">The message data to be sent.</param>
+        </member>
+        <member name="M:Retyped.paho_mqtt.Paho.MQTT.Message.#ctor(Retyped.es5.Int8Array)">
+            <param name = "payload">The message data to be sent.</param>
+        </member>
+        <member name="M:Retyped.paho_mqtt.Paho.MQTT.Message.#ctor(Retyped.es5.Uint8Array)">
+            <param name = "payload">The message data to be sent.</param>
+        </member>
+        <member name="M:Retyped.paho_mqtt.Paho.MQTT.Message.#ctor(Retyped.es5.Uint8ClampedArray)">
+            <param name = "payload">The message data to be sent.</param>
+        </member>
+        <member name="M:Retyped.paho_mqtt.Paho.MQTT.Message.#ctor(Retyped.es5.Int16Array)">
+            <param name = "payload">The message data to be sent.</param>
+        </member>
+        <member name="M:Retyped.paho_mqtt.Paho.MQTT.Message.#ctor(Retyped.es5.Uint16Array)">
+            <param name = "payload">The message data to be sent.</param>
+        </member>
+        <member name="M:Retyped.paho_mqtt.Paho.MQTT.Message.#ctor(Retyped.es5.Int32Array)">
+            <param name = "payload">The message data to be sent.</param>
+        </member>
+        <member name="M:Retyped.paho_mqtt.Paho.MQTT.Message.#ctor(Retyped.es5.Uint32Array)">
+            <param name = "payload">The message data to be sent.</param>
+        </member>
+        <member name="M:Retyped.paho_mqtt.Paho.MQTT.Message.#ctor(Retyped.es5.Float32Array)">
+            <param name = "payload">The message data to be sent.</param>
+        </member>
+        <member name="M:Retyped.paho_mqtt.Paho.MQTT.Message.#ctor(Retyped.es5.Float64Array)">
+            <param name = "payload">The message data to be sent.</param>
+        </member>
+        <!-- Badly formed XML comment ignored for member "T:Retyped.paho_mqtt.Paho.MQTT.OnSuccessCallback" -->
+        <!-- Badly formed XML comment ignored for member "T:Retyped.paho_mqtt.Paho.MQTT.OnSubscribeSuccessCallback" -->
+        <!-- Badly formed XML comment ignored for member "T:Retyped.paho_mqtt.Paho.MQTT.OnFailureCallback" -->
+        <!-- Badly formed XML comment ignored for member "T:Retyped.paho_mqtt.Paho.MQTT.OnConnectionLostHandler" -->
+        <member name="T:Retyped.paho_mqtt.Paho.MQTT.OnMessageHandler">
+            <summary>
+            Called when a message was delivered or has arrived.
+            </summary>
+            <param name = "message">The {@link Paho.MQTT.Message} that was delivered or has arrived.</param>
+        </member>
+    </members>
+</doc>
