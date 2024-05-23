@@ -9,51 +9,51 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = WebPage.DesafioFullStack
 build_property.RootNamespace = WebPage.DesafioFullStack
-build_property.ProjectDir = D:\Projetos\Desafio FullStack\Desenvolvimento\DesafioFullStack\WebPage.DesafioFullStack\
+build_property.ProjectDir = D:\Projetos\DeafioFullStack\WebPage.DesafioFullStack\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = D:\Projetos\Desafio FullStack\Desenvolvimento\DesafioFullStack\WebPage.DesafioFullStack
+build_property.MSBuildProjectDirectory = D:\Projetos\DeafioFullStack\WebPage.DesafioFullStack
 build_property._RazorSourceGeneratorDebug = 
 
-[D:/Projetos/Desafio FullStack/Desenvolvimento/DesafioFullStack/WebPage.DesafioFullStack/Views/Authentication/Login.cshtml]
+[D:/Projetos/DeafioFullStack/WebPage.DesafioFullStack/Views/Authentication/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aGVudGljYXRpb25cTG9naW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projetos/Desafio FullStack/Desenvolvimento/DesafioFullStack/WebPage.DesafioFullStack/Views/Device/DeviceComunication.cshtml]
+[D:/Projetos/DeafioFullStack/WebPage.DesafioFullStack/Views/Device/DeviceComunication.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGV2aWNlXERldmljZUNvbXVuaWNhdGlvbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projetos/Desafio FullStack/Desenvolvimento/DesafioFullStack/WebPage.DesafioFullStack/Views/Device/DeviceListSelector.cshtml]
+[D:/Projetos/DeafioFullStack/WebPage.DesafioFullStack/Views/Device/DeviceListSelector.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGV2aWNlXERldmljZUxpc3RTZWxlY3Rvci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projetos/Desafio FullStack/Desenvolvimento/DesafioFullStack/WebPage.DesafioFullStack/Views/Home/Index.cshtml]
+[D:/Projetos/DeafioFullStack/WebPage.DesafioFullStack/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projetos/Desafio FullStack/Desenvolvimento/DesafioFullStack/WebPage.DesafioFullStack/Views/Home/Privacy.cshtml]
+[D:/Projetos/DeafioFullStack/WebPage.DesafioFullStack/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projetos/Desafio FullStack/Desenvolvimento/DesafioFullStack/WebPage.DesafioFullStack/Views/Shared/Error.cshtml]
+[D:/Projetos/DeafioFullStack/WebPage.DesafioFullStack/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projetos/Desafio FullStack/Desenvolvimento/DesafioFullStack/WebPage.DesafioFullStack/Views/Shared/_ValidationScriptsPartial.cshtml]
+[D:/Projetos/DeafioFullStack/WebPage.DesafioFullStack/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projetos/Desafio FullStack/Desenvolvimento/DesafioFullStack/WebPage.DesafioFullStack/Views/_ViewImports.cshtml]
+[D:/Projetos/DeafioFullStack/WebPage.DesafioFullStack/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projetos/Desafio FullStack/Desenvolvimento/DesafioFullStack/WebPage.DesafioFullStack/Views/_ViewStart.cshtml]
+[D:/Projetos/DeafioFullStack/WebPage.DesafioFullStack/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projetos/Desafio FullStack/Desenvolvimento/DesafioFullStack/WebPage.DesafioFullStack/Views/Shared/_Layout.cshtml]
+[D:/Projetos/DeafioFullStack/WebPage.DesafioFullStack/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-61h7ng0i5l

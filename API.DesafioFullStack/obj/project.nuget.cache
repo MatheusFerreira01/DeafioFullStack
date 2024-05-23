@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "8X14EWr2KtyksQrIUjBIkG7jastJdlndKK0ARyCwBi8CFyg7ui3w3FBPi8EGTqylCFmr8VYC4ZT1bas+BxPGSw==",
+  "dgSpecHash": "5KgImWmH9otlZuSkT9ShIqxFy1AMGxdqES01EfwIAfvR/3AH1EPmvojQxcGVgLTQJC/YSRo2XGljn1j1tuBr4w==",
   "success": true,
-  "projectFilePath": "D:\\Projetos\\Desafio FullStack\\Desenvolvimento\\DesafioFullStack\\API.DesafioFullStack\\API.DesafioFullStack.csproj",
+  "projectFilePath": "D:\\Projetos\\DeafioFullStack\\API.DesafioFullStack\\API.DesafioFullStack.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Windows 11 Pro UFFI\\.nuget\\packages\\csvhelper\\32.0.3\\csvhelper.32.0.3.nupkg.sha512",
     "C:\\Users\\Windows 11 Pro UFFI\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",

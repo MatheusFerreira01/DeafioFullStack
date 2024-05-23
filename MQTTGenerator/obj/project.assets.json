@@ -350,11 +350,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Projetos\\Desafio FullStack\\Desenvolvimento\\DesafioFullStack\\MQTTGenerator\\DevicesGenerator.csproj",
+      "projectUniqueName": "D:\\Projetos\\DeafioFullStack\\MQTTGenerator\\DevicesGenerator.csproj",
       "projectName": "DevicesGenerator",
-      "projectPath": "D:\\Projetos\\Desafio FullStack\\Desenvolvimento\\DesafioFullStack\\MQTTGenerator\\DevicesGenerator.csproj",
+      "projectPath": "D:\\Projetos\\DeafioFullStack\\MQTTGenerator\\DevicesGenerator.csproj",
       "packagesPath": "C:\\Users\\Windows 11 Pro UFFI\\.nuget\\packages\\",
-      "outputPath": "D:\\Projetos\\Desafio FullStack\\Desenvolvimento\\DesafioFullStack\\MQTTGenerator\\obj\\",
+      "outputPath": "D:\\Projetos\\DeafioFullStack\\MQTTGenerator\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -376,11 +376,11 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\Projetos\\Desafio FullStack\\Desenvolvimento\\DesafioFullStack\\Shared.DataBase.DesafioFullStack\\Shared.DataBase.DesafioFullStack.csproj": {
-              "projectPath": "D:\\Projetos\\Desafio FullStack\\Desenvolvimento\\DesafioFullStack\\Shared.DataBase.DesafioFullStack\\Shared.DataBase.DesafioFullStack.csproj"
+            "D:\\Projetos\\DeafioFullStack\\Shared.DataBase.DesafioFullStack\\Shared.DataBase.DesafioFullStack.csproj": {
+              "projectPath": "D:\\Projetos\\DeafioFullStack\\Shared.DataBase.DesafioFullStack\\Shared.DataBase.DesafioFullStack.csproj"
             },
-            "D:\\Projetos\\Desafio FullStack\\Desenvolvimento\\DesafioFullStack\\Shared.Models.DesafioFullStack\\Shared.Models.DesafioFullStack.csproj": {
-              "projectPath": "D:\\Projetos\\Desafio FullStack\\Desenvolvimento\\DesafioFullStack\\Shared.Models.DesafioFullStack\\Shared.Models.DesafioFullStack.csproj"
+            "D:\\Projetos\\DeafioFullStack\\Shared.Models.DesafioFullStack\\Shared.Models.DesafioFullStack.csproj": {
+              "projectPath": "D:\\Projetos\\DeafioFullStack\\Shared.Models.DesafioFullStack\\Shared.Models.DesafioFullStack.csproj"
             }
           }
         }

@@ -13,3 +13,19 @@ D:\Projetos\Desafio FullStack\Desenvolvimento\DesafioFullStack\Shared.DataBase.D
 D:\Projetos\Desafio FullStack\Desenvolvimento\DesafioFullStack\Shared.DataBase.DesafioFullStack\obj\Debug\net8.0\refint\Shared.DataBase.DesafioFullStack.dll
 D:\Projetos\Desafio FullStack\Desenvolvimento\DesafioFullStack\Shared.DataBase.DesafioFullStack\obj\Debug\net8.0\Shared.DataBase.DesafioFullStack.pdb
 D:\Projetos\Desafio FullStack\Desenvolvimento\DesafioFullStack\Shared.DataBase.DesafioFullStack\obj\Debug\net8.0\ref\Shared.DataBase.DesafioFullStack.dll
+D:\Projetos\DeafioFullStack\Shared.DataBase.DesafioFullStack\bin\Debug\net8.0\Shared.DataBase.DesafioFullStack.deps.json
+D:\Projetos\DeafioFullStack\Shared.DataBase.DesafioFullStack\bin\Debug\net8.0\Shared.DataBase.DesafioFullStack.dll
+D:\Projetos\DeafioFullStack\Shared.DataBase.DesafioFullStack\bin\Debug\net8.0\Shared.DataBase.DesafioFullStack.pdb
+D:\Projetos\DeafioFullStack\Shared.DataBase.DesafioFullStack\bin\Debug\net8.0\Shared.Models.DesafioFullStack.dll
+D:\Projetos\DeafioFullStack\Shared.DataBase.DesafioFullStack\bin\Debug\net8.0\Shared.Models.DesafioFullStack.pdb
+D:\Projetos\DeafioFullStack\Shared.DataBase.DesafioFullStack\obj\Debug\net8.0\Shared.DataBase.DesafioFullStack.csproj.AssemblyReference.cache
+D:\Projetos\DeafioFullStack\Shared.DataBase.DesafioFullStack\obj\Debug\net8.0\Shared.DataBase.DesafioFullStack.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projetos\DeafioFullStack\Shared.DataBase.DesafioFullStack\obj\Debug\net8.0\Shared.DataBase.DesafioFullStack.AssemblyInfoInputs.cache
+D:\Projetos\DeafioFullStack\Shared.DataBase.DesafioFullStack\obj\Debug\net8.0\Shared.DataBase.DesafioFullStack.AssemblyInfo.cs
+D:\Projetos\DeafioFullStack\Shared.DataBase.DesafioFullStack\obj\Debug\net8.0\Shared.DataBase.DesafioFullStack.csproj.CoreCompileInputs.cache
+D:\Projetos\DeafioFullStack\Shared.DataBase.DesafioFullStack\obj\Debug\net8.0\Shared.DataBase.DesafioFullStack.sourcelink.json
+D:\Projetos\DeafioFullStack\Shared.DataBase.DesafioFullStack\obj\Debug\net8.0\Shared.D.7A8579AA.Up2Date
+D:\Projetos\DeafioFullStack\Shared.DataBase.DesafioFullStack\obj\Debug\net8.0\Shared.DataBase.DesafioFullStack.dll
+D:\Projetos\DeafioFullStack\Shared.DataBase.DesafioFullStack\obj\Debug\net8.0\refint\Shared.DataBase.DesafioFullStack.dll
+D:\Projetos\DeafioFullStack\Shared.DataBase.DesafioFullStack\obj\Debug\net8.0\Shared.DataBase.DesafioFullStack.pdb
+D:\Projetos\DeafioFullStack\Shared.DataBase.DesafioFullStack\obj\Debug\net8.0\ref\Shared.DataBase.DesafioFullStack.dll

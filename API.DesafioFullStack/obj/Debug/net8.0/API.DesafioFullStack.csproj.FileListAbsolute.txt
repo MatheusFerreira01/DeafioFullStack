@@ -38,3 +38,44 @@ D:\Projetos\Desafio FullStack\Desenvolvimento\DesafioFullStack\API.DesafioFullSt
 D:\Projetos\Desafio FullStack\Desenvolvimento\DesafioFullStack\API.DesafioFullStack\obj\Debug\net8.0\API.DesafioFullStack.pdb
 D:\Projetos\Desafio FullStack\Desenvolvimento\DesafioFullStack\API.DesafioFullStack\obj\Debug\net8.0\API.DesafioFullStack.genruntimeconfig.cache
 D:\Projetos\Desafio FullStack\Desenvolvimento\DesafioFullStack\API.DesafioFullStack\obj\Debug\net8.0\ref\API.DesafioFullStack.dll
+D:\Projetos\DeafioFullStack\API.DesafioFullStack\bin\Debug\net8.0\appsettings.Development.json
+D:\Projetos\DeafioFullStack\API.DesafioFullStack\bin\Debug\net8.0\appsettings.json
+D:\Projetos\DeafioFullStack\API.DesafioFullStack\bin\Debug\net8.0\API.DesafioFullStack.exe
+D:\Projetos\DeafioFullStack\API.DesafioFullStack\bin\Debug\net8.0\API.DesafioFullStack.deps.json
+D:\Projetos\DeafioFullStack\API.DesafioFullStack\bin\Debug\net8.0\API.DesafioFullStack.runtimeconfig.json
+D:\Projetos\DeafioFullStack\API.DesafioFullStack\bin\Debug\net8.0\API.DesafioFullStack.dll
+D:\Projetos\DeafioFullStack\API.DesafioFullStack\bin\Debug\net8.0\API.DesafioFullStack.pdb
+D:\Projetos\DeafioFullStack\API.DesafioFullStack\bin\Debug\net8.0\API.DesafioFullStack.xml
+D:\Projetos\DeafioFullStack\API.DesafioFullStack\bin\Debug\net8.0\CsvHelper.dll
+D:\Projetos\DeafioFullStack\API.DesafioFullStack\bin\Debug\net8.0\Microsoft.OpenApi.dll
+D:\Projetos\DeafioFullStack\API.DesafioFullStack\bin\Debug\net8.0\Newtonsoft.Json.dll
+D:\Projetos\DeafioFullStack\API.DesafioFullStack\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\Projetos\DeafioFullStack\API.DesafioFullStack\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\Projetos\DeafioFullStack\API.DesafioFullStack\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\Projetos\DeafioFullStack\API.DesafioFullStack\bin\Debug\net8.0\Shared.DataBase.DesafioFullStack.dll
+D:\Projetos\DeafioFullStack\API.DesafioFullStack\bin\Debug\net8.0\Shared.Models.DesafioFullStack.dll
+D:\Projetos\DeafioFullStack\API.DesafioFullStack\bin\Debug\net8.0\Shared.DataBase.DesafioFullStack.pdb
+D:\Projetos\DeafioFullStack\API.DesafioFullStack\bin\Debug\net8.0\Shared.Models.DesafioFullStack.pdb
+D:\Projetos\DeafioFullStack\API.DesafioFullStack\obj\Debug\net8.0\API.DesafioFullStack.csproj.AssemblyReference.cache
+D:\Projetos\DeafioFullStack\API.DesafioFullStack\obj\Debug\net8.0\API.DesafioFullStack.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projetos\DeafioFullStack\API.DesafioFullStack\obj\Debug\net8.0\API.DesafioFullStack.AssemblyInfoInputs.cache
+D:\Projetos\DeafioFullStack\API.DesafioFullStack\obj\Debug\net8.0\API.DesafioFullStack.AssemblyInfo.cs
+D:\Projetos\DeafioFullStack\API.DesafioFullStack\obj\Debug\net8.0\API.DesafioFullStack.csproj.CoreCompileInputs.cache
+D:\Projetos\DeafioFullStack\API.DesafioFullStack\obj\Debug\net8.0\API.DesafioFullStack.MvcApplicationPartsAssemblyInfo.cs
+D:\Projetos\DeafioFullStack\API.DesafioFullStack\obj\Debug\net8.0\API.DesafioFullStack.MvcApplicationPartsAssemblyInfo.cache
+D:\Projetos\DeafioFullStack\API.DesafioFullStack\obj\Debug\net8.0\API.DesafioFullStack.sourcelink.json
+D:\Projetos\DeafioFullStack\API.DesafioFullStack\obj\Debug\net8.0\staticwebassets.build.json
+D:\Projetos\DeafioFullStack\API.DesafioFullStack\obj\Debug\net8.0\staticwebassets.development.json
+D:\Projetos\DeafioFullStack\API.DesafioFullStack\obj\Debug\net8.0\staticwebassets\msbuild.API.DesafioFullStack.Microsoft.AspNetCore.StaticWebAssets.props
+D:\Projetos\DeafioFullStack\API.DesafioFullStack\obj\Debug\net8.0\staticwebassets\msbuild.build.API.DesafioFullStack.props
+D:\Projetos\DeafioFullStack\API.DesafioFullStack\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.API.DesafioFullStack.props
+D:\Projetos\DeafioFullStack\API.DesafioFullStack\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.API.DesafioFullStack.props
+D:\Projetos\DeafioFullStack\API.DesafioFullStack\obj\Debug\net8.0\staticwebassets.pack.json
+D:\Projetos\DeafioFullStack\API.DesafioFullStack\obj\Debug\net8.0\scopedcss\bundle\API.DesafioFullStack.styles.css
+D:\Projetos\DeafioFullStack\API.DesafioFullStack\obj\Debug\net8.0\API.Desa.7F232DC5.Up2Date
+D:\Projetos\DeafioFullStack\API.DesafioFullStack\obj\Debug\net8.0\API.DesafioFullStack.dll
+D:\Projetos\DeafioFullStack\API.DesafioFullStack\obj\Debug\net8.0\refint\API.DesafioFullStack.dll
+D:\Projetos\DeafioFullStack\API.DesafioFullStack\obj\Debug\net8.0\API.DesafioFullStack.xml
+D:\Projetos\DeafioFullStack\API.DesafioFullStack\obj\Debug\net8.0\API.DesafioFullStack.pdb
+D:\Projetos\DeafioFullStack\API.DesafioFullStack\obj\Debug\net8.0\API.DesafioFullStack.genruntimeconfig.cache
+D:\Projetos\DeafioFullStack\API.DesafioFullStack\obj\Debug\net8.0\ref\API.DesafioFullStack.dll

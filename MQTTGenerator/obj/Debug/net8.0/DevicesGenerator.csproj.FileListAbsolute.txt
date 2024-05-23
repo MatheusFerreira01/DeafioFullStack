@@ -24,3 +24,30 @@ D:\Projetos\Desafio FullStack\Desenvolvimento\DesafioFullStack\MQTTGenerator\obj
 D:\Projetos\Desafio FullStack\Desenvolvimento\DesafioFullStack\MQTTGenerator\obj\Debug\net8.0\DevicesGenerator.pdb
 D:\Projetos\Desafio FullStack\Desenvolvimento\DesafioFullStack\MQTTGenerator\obj\Debug\net8.0\DevicesGenerator.genruntimeconfig.cache
 D:\Projetos\Desafio FullStack\Desenvolvimento\DesafioFullStack\MQTTGenerator\obj\Debug\net8.0\ref\DevicesGenerator.dll
+D:\Projetos\DeafioFullStack\MQTTGenerator\bin\Debug\net8.0\DevicesGenerator.exe
+D:\Projetos\DeafioFullStack\MQTTGenerator\bin\Debug\net8.0\DevicesGenerator.deps.json
+D:\Projetos\DeafioFullStack\MQTTGenerator\bin\Debug\net8.0\DevicesGenerator.runtimeconfig.json
+D:\Projetos\DeafioFullStack\MQTTGenerator\bin\Debug\net8.0\DevicesGenerator.dll
+D:\Projetos\DeafioFullStack\MQTTGenerator\bin\Debug\net8.0\DevicesGenerator.pdb
+D:\Projetos\DeafioFullStack\MQTTGenerator\bin\Debug\net8.0\CsvHelper.dll
+D:\Projetos\DeafioFullStack\MQTTGenerator\bin\Debug\net8.0\HiveMQtt.dll
+D:\Projetos\DeafioFullStack\MQTTGenerator\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
+D:\Projetos\DeafioFullStack\MQTTGenerator\bin\Debug\net8.0\Newtonsoft.Json.dll
+D:\Projetos\DeafioFullStack\MQTTGenerator\bin\Debug\net8.0\NLog.dll
+D:\Projetos\DeafioFullStack\MQTTGenerator\bin\Debug\net8.0\System.IO.Pipelines.dll
+D:\Projetos\DeafioFullStack\MQTTGenerator\bin\Debug\net8.0\Shared.DataBase.DesafioFullStack.dll
+D:\Projetos\DeafioFullStack\MQTTGenerator\bin\Debug\net8.0\Shared.Models.DesafioFullStack.dll
+D:\Projetos\DeafioFullStack\MQTTGenerator\bin\Debug\net8.0\Shared.DataBase.DesafioFullStack.pdb
+D:\Projetos\DeafioFullStack\MQTTGenerator\bin\Debug\net8.0\Shared.Models.DesafioFullStack.pdb
+D:\Projetos\DeafioFullStack\MQTTGenerator\obj\Debug\net8.0\DevicesGenerator.csproj.AssemblyReference.cache
+D:\Projetos\DeafioFullStack\MQTTGenerator\obj\Debug\net8.0\DevicesGenerator.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projetos\DeafioFullStack\MQTTGenerator\obj\Debug\net8.0\DevicesGenerator.AssemblyInfoInputs.cache
+D:\Projetos\DeafioFullStack\MQTTGenerator\obj\Debug\net8.0\DevicesGenerator.AssemblyInfo.cs
+D:\Projetos\DeafioFullStack\MQTTGenerator\obj\Debug\net8.0\DevicesGenerator.csproj.CoreCompileInputs.cache
+D:\Projetos\DeafioFullStack\MQTTGenerator\obj\Debug\net8.0\DevicesGenerator.sourcelink.json
+D:\Projetos\DeafioFullStack\MQTTGenerator\obj\Debug\net8.0\DevicesG.8E0CCB17.Up2Date
+D:\Projetos\DeafioFullStack\MQTTGenerator\obj\Debug\net8.0\DevicesGenerator.dll
+D:\Projetos\DeafioFullStack\MQTTGenerator\obj\Debug\net8.0\refint\DevicesGenerator.dll
+D:\Projetos\DeafioFullStack\MQTTGenerator\obj\Debug\net8.0\DevicesGenerator.pdb
+D:\Projetos\DeafioFullStack\MQTTGenerator\obj\Debug\net8.0\DevicesGenerator.genruntimeconfig.cache
+D:\Projetos\DeafioFullStack\MQTTGenerator\obj\Debug\net8.0\ref\DevicesGenerator.dll

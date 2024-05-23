@@ -40,27 +40,54 @@ namespace Shared.DataBase.DesafioFullStack
         {
             string originalPath = Directory.GetCurrentDirectory();
 
-            string partToRemove = @"\DesafioFullStack";
+            string partToRemove = @"\DeafioFullStack";
 
             string baseDirectory = originalPath.Substring(0, originalPath.IndexOf(partToRemove) + partToRemove.Length);
 
-            string fullPath = Path.Combine(baseDirectory, "Shared.DataBase.DesafioFullStack\\BaseFiles", fileName);
+            string fullPath = Path.Combine(baseDirectory, "Shared.DataBase.DesafioFullStack\\BaseFiles");
+
+            if (!File.Exists(fullPath))
+            {
+                Directory.CreateDirectory(fullPath);
+
+                if (fileName == "Devices.csv") 
+                {
+                    using (StreamWriter writer = File.CreateText(Path.Combine(fullPath, fileName)))
+                    {
+                        writer.WriteLine("Identifier;Description;Manufacturer;Url");
+                        writer.WriteLine("Dispositivo01;Dispositivo Virtual 01;TestsLTDA;localhost:8001");
+                    }
+                }
+                else if (fileName == "Users.csv")
+                {
+                    using (StreamWriter writer = File.CreateText(Path.Combine(fullPath, fileName)))
+                    {
+                        writer.WriteLine("FullName;Username;Password;Profile");
+                        writer.WriteLine("Perfil Standard;admin;admin;ADMINISTRADOR");
+                    }
+                }
+                else if(fileName == "CommandDescriptions.csv")
+                {
+                    using (StreamWriter writer = File.CreateText(Path.Combine(fullPath, fileName)))
+                    {
+                        writer.WriteLine("Operation;Description;Result;Format");
+                        writer.WriteLine("Ler Valor; Realiza o valor de leitura do dispositivo;double; application / json");
+                        writer.WriteLine("Estado; Realiza a consulta do estado do dispositivo;boolean; application / json");
+                        writer.WriteLine("Reiniciar; Reinicia o dispositivo; string; application / json");
+                        writer.WriteLine("Comandos; Retorna a lista de comandos do dispositivo;string; application / json");
+                        writer.WriteLine("Descrição; Retorna a descrição do dispositivo;string; application / json");
+                    }
+                }
+            }
+
+            fullPath = Path.Combine(baseDirectory, "Shared.DataBase.DesafioFullStack\\BaseFiles",fileName);
 
             return fullPath;
         }
 
         public static List<User> LoadContentUsers()
-        {
-            if (!File.Exists(BaseFilesDevicesPath))
-            {
-                using (StreamWriter writer = File.CreateText(BaseFilesUsersPath))
-                {
-                    writer.WriteLine("FullName;Username;Password;Profile");
-                    writer.WriteLine("Perfil Standard;admin;admin;ADMINISTRADOR");
-                }
-            }
-
-                List<User> listUsers;
+        {            
+            List<User> listUsers;
 
             var config = new CsvConfiguration(CultureInfo.InvariantCulture)
             {
@@ -78,18 +105,9 @@ namespace Shared.DataBase.DesafioFullStack
 
             return listUsers;
 
-        }   
+        }
         public static List<Device> LoadDeviceConfigs()
         {
-            if (!File.Exists(BaseFilesDevicesPath))
-            {
-                using (StreamWriter writer = File.CreateText(BaseFilesDevicesPath))
-                {
-                    writer.WriteLine("Identifier;Description;Manufacturer;Url");
-                    writer.WriteLine("Dispositivo01;Dispositivo Virtual 01;TestsLTDA;localhost:8001");
-                }
-            }
-
             List<Device> listDevices;
 
             var config = new CsvConfiguration(CultureInfo.InvariantCulture)
@@ -117,20 +135,7 @@ namespace Shared.DataBase.DesafioFullStack
         }
 
         public static List<CommandDescription> LoadCommandDescriptionConfigs()
-        {
-            if (!File.Exists(BaseFilesDevicesPath))
-            {
-                using (StreamWriter writer = File.CreateText(BaseFilesCommandDescPath))
-                {
-                    writer.WriteLine("Operation;Description;Result;Format");
-                    writer.WriteLine("Ler Valor; Realiza o valor de leitura do dispositivo;double; application / json");
-                    writer.WriteLine("Estado; Realiza a consulta do estado do dispositivo;boolean; application / json");
-                    writer.WriteLine("Reiniciar; Reinicia o dispositivo; string; application / json");
-                    writer.WriteLine("Comandos; Retorna a lista de comandos do dispositivo;string; application / json");
-                    writer.WriteLine("Descrição; Retorna a descrição do dispositivo;string; application / json");
-
-                }
-            }
+        {           
 
             List<CommandDescription> listCommandDesc;
 

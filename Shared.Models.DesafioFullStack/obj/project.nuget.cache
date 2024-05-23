@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "eLMUQd4KtKrvcl/NeYyWcZj4M//KAM/Vw5+ECOQi7IQ1GF1EaHRuSHEsB50518hq5FA9EorR3VBfSZnrE2CLdw==",
+  "dgSpecHash": "OwFMgfgNe2PMGn06OQs35v7AYROYCgG1YPMt2ZQfemZ2+qU0tA/hLE26jCctZBKd5xeAYhTWNwdFE44vN/fuPQ==",
   "success": true,
-  "projectFilePath": "D:\\Projetos\\Desafio FullStack\\Desenvolvimento\\DesafioFullStack\\Shared.Models.DesafioFullStack\\Shared.Models.DesafioFullStack.csproj",
+  "projectFilePath": "D:\\Projetos\\DeafioFullStack\\Shared.Models.DesafioFullStack\\Shared.Models.DesafioFullStack.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Windows 11 Pro UFFI\\.nuget\\packages\\csvhelper\\32.0.3\\csvhelper.32.0.3.nupkg.sha512",
     "C:\\Users\\Windows 11 Pro UFFI\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
