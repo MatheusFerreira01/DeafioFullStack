@@ -1,12 +1,37 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\Projetos\\DeafioFullStack\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{980C2F52-D8B4-4646-AAF7-BF8E50182E1C}|WebPage.DesafioFullStack\\WebPage.DesafioFullStack.csproj|d:\\projetos\\deafiofullstack\\webpage.desafiofullstack\\views\\device\\devicecomunication.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{980C2F52-D8B4-4646-AAF7-BF8E50182E1C}|WebPage.DesafioFullStack\\WebPage.DesafioFullStack.csproj|solutionrelative:webpage.desafiofullstack\\views\\device\\devicecomunication.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DeviceComunication.cshtml",
+              "DocumentMoniker": "D:\\Projetos\\DeafioFullStack\\WebPage.DesafioFullStack\\Views\\Device\\DeviceComunication.cshtml",
+              "RelativeDocumentMoniker": "WebPage.DesafioFullStack\\Views\\Device\\DeviceComunication.cshtml",
+              "ToolTip": "D:\\Projetos\\DeafioFullStack\\WebPage.DesafioFullStack\\Views\\Device\\DeviceComunication.cshtml",
+              "RelativeToolTip": "WebPage.DesafioFullStack\\Views\\Device\\DeviceComunication.cshtml",
+              "ViewState": "AQIAABIAAAAAAAAAAAAAACgAAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-24T02:04:31.502Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }

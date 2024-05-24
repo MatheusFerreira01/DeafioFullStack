@@ -18,7 +18,7 @@ using static System.Runtime.InteropServices.JavaScript.JSType;
 namespace Shared.DataBase.DesafioFullStack
 {
     public class BaseConfigurations
-    {
+    {      
 
         private static string baseFilesDevicesPath = GetFilesLocation("Devices.csv");
         public static string BaseFilesDevicesPath

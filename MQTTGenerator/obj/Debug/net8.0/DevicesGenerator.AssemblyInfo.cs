@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DevicesGenerator")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+da8dc630f6b91879970892b5b3697c2bdc515226")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+42f00e777fb7bdecd53013a8a834aa9c82b23438")]
 [assembly: System.Reflection.AssemblyProductAttribute("DevicesGenerator")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DevicesGenerator")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

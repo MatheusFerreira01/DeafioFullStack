@@ -2,10 +2,11 @@
 
 public class CommonApi
 {
-
-    public static readonly string DFSApiUrl = "https://localhost:7078";
+    
+    public static string DFSApiUrl;
 
     #region Rotas dos Dispositivos
+
     public static readonly string DFSGetListDevicesRoute = "/Device";
     public static readonly string DFSPostDeviceRoute = "/Device";
     public static readonly string DFSGetDeviceRoute = "/Device";
@@ -13,4 +14,9 @@ public class CommonApi
     public static readonly string DFSDeleteDeviceRoute = "/Device";
 
     #endregion
+
+    public static void GetApiUlr(string? apiUrl)
+    {
+        DFSApiUrl = apiUrl;
+    }
 }

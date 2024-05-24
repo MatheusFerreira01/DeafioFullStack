@@ -1,4 +1,5 @@
 Identifier;Description;Manufacturer;Url
 Dispositivo01;Dispositivo Virtual 01;TestsLTDA;localhost:8001
 Dispositivo - 2;Teste de Alteracao;TestsLTDA;localhost:8002
+Dispositivo - 3;Dispositivo de Teste Simulado - 3;TestsLTDA;localhost:8003
 

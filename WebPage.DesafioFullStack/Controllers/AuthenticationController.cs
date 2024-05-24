@@ -10,12 +10,14 @@ namespace WebPage.DesafioFullStack.Controllers;
 public class AuthenticationController : Controller
 {
     private readonly IHttpClientFactory _httpClientFactory;
+    private readonly IConfiguration _configuration;
 
-    public AuthenticationController(IHttpClientFactory httpClientFactory)
+    public AuthenticationController(IHttpClientFactory httpClientFactory, IConfiguration configuration)
     {
         _httpClientFactory = httpClientFactory;
-
+        _configuration = configuration;
     }
+
 
     [HttpGet("Login")]
     public IActionResult Login()
@@ -26,6 +28,8 @@ public class AuthenticationController : Controller
     [HttpPost("SendLogin")]
     public async Task<IActionResult> Login(LoginModel loginModel)
     {
+        CommonApi.GetApiUlr(_configuration["ApiSettings:ApiConnection"]);
+
         if (string.IsNullOrEmpty(loginModel.Username) || string.IsNullOrEmpty(loginModel.Password))
         {
             ViewBag.Error = "Username and password are required.";
