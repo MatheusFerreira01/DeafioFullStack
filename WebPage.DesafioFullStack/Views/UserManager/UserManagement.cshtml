@@ -1,40 +1,48 @@
 ﻿@{
-    ViewBag.Title = "Home";
+    ViewBag.Title = "UserManagement";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <div class="main">
     <div class="login-container">
         <div class="login-form">
-            <h2>Gerenciador de Usuários</h2>
+            <h2>Gerenciador de Usuarios</h2>
             <p><b>Preencha corretamente o formulário abaixo com os respectivos dados cadastrais</b></p>
-            <form method="post">
+            <form id="deviceForm">
                 <div class="form-group">
-                    <label for="nome">Nome Completo</label>
-                    <input type="text" id="nome" name="nome" required>
-                </div>
-                <div class="form-group">
-                    <label for="user_name">Usuário</label>
-                    <input type="text" id="user_name" name="user_name" required>
-                </div>
-                <div class="form-group">
-                    <label for="user_pwd">Senha</label>
-                    <div class="password-container">
-                        <input type="password" id="user_pwd" name="user_pwd">
-                        <i class="toggle-password fas fa-eye" onclick="togglePasswordVisibility()"></i>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="SelectProfile">Selecione o Perfil</label>
-                    <select class="form-control" id="SelectProfile" name="SelectProfile">
-                        <option value="">Selecione o Perfil</option>
-                        <option value="ADMINISTRADOR">ADMINISTRADOR</option>
-                        <option value="VISUALIZACAO">VISUALIZAÇÃO</option>
+                    <select class="form-control" for="selectedUser" id="selectedUser" name="selectedUser" onchange="stateButton()">
+                        <option value="">Selecione um Usuario</option>
+                        @foreach (var user in Model.ListSelectUsers)
+                        {
+                            <option value="@user.Username">@user.FullName</option>
+                        }
                     </select>
                 </div>
+                <div class="form-group">
+                    <label for="userName">Usuario/Login</label>
+                    <input type="text" id="userName" name="Username">
+                </div>
+                <div class="form-group">
+                    <label for="userFulName">Nome Completo</label>
+                    <input type="text" id="userFullName" name="FullName">
+                </div>
+                <div class="form-group">
+                    <div class="password-input-group"
+                    <label for="userPassword">Senha</label>
+                    <input type="password" id="userPassword" name="UserPassword">
+                    <i class="toggle-password fas fa-eye" onclick="togglePasswordVisibility()"></i>
+                    </div>
+                </div>
+                <select class="form-control" for="selectedProfile" id="selectedProfile" name="selectedProfile" onchange="stateButton()">
+                    <option value="">Selecione um Perfil</option>
+                    <option value="VISUALIZACAO">Perfil de Visualização</option>
+                    <option value="ADMINISTRADOR">Perfil de Adminstração</option>
+                </select>
                 <div class="button-container">
-                    <button type="button" class="btn btn-primary" onclick="alert('Usuário cadastrado com sucesso!')">Confirmar</button>
-                    <button type="button" class="btn btn-secondary">Cancelar</button>
+                    <button type="button" class="btn btn-success" name="add" onclick="validateForm(this.name)">Criar</button>
+                    <button type="button" class="btn btn-info" name="edit" onclick="validateForm(this.name)" disabled>Editar</button>
+                    <button type="button" class="btn btn-warning" name="remove" onclick="validateForm(this.name)" disabled>Remover</button>
+                    <button type="button" class="btn btn-secondary" onclick="backHomePage()">Voltar</button>
                 </div>
             </form>
         </div>
@@ -43,8 +51,9 @@
 @section Scripts
 {
     <script>
+
         function togglePasswordVisibility() {
-            var passwordField = document.getElementById("user_pwd");
+            var passwordField = document.getElementById("userPassword");
             var eyeIcon = document.querySelector(".toggle-password");
 
             if (passwordField.type === "password") {
@@ -58,13 +67,108 @@
             }
         }
 
-        function toggleProfileOptions() {
-            var options = document.getElementById("profileOptions");
-            if (options.style.display === "none") {
-                options.style.display = "block";
+        function stateButton() {
+            var selectedUser = document.getElementById("selectedUser").value;
+
+            var editButton = document.querySelector('button[name="edit"]');
+            var removeButton = document.querySelector('button[name="remove"]');
+            var addButton = document.querySelector('button[name="add"]');
+            var nameLabel = document.getElementById("userName");
+
+            if (!selectedUser || selectedUser === 'Selecione um Usuario') {
+
+                editButton.disabled = true;
+                removeButton.disabled = true;
+                addButton.disabled = false;
+                nameLabel.disabled = false;
             } else {
-                options.style.display = "none";
+
+                editButton.disabled = false;
+                removeButton.disabled = false;
+                addButton.disabled = true;
+                nameLabel.disabled = true;                
             }
+        }
+
+        function backHomePage() {
+            window.location.href = "/";
+        }
+
+        function validateForm(action) {
+
+            const userFullName = document.getElementById("userFullName").value;
+            const userName = document.getElementById("userName").value;
+            const userPassword = document.getElementById("userPassword").value;
+            const selectedUser = document.getElementById("selectedUser").value;
+            const selectedProfile = document.getElementById("selectedProfile").value;
+
+            if (action === 'add') {
+                if (!userFullName || !userName || !userPassword || !selectedProfile || selectedProfile == 'Selecione um Perfil') {
+                    alert("Todos os campos devem ser preenchidos.");
+                    return false;
+                }
+            }
+            else if (action === 'remove') {
+                if (!selectedUser || selectedProfile == 'Selecione um Usuario') {
+                    alert("Selecione um usuario para manipular");
+                    return false;
+                }
+            }
+            else if (action === 'edit') {
+                if (!selectedUser || !userPassword || !userFullName || !selectedProfile || selectedProfile == 'Selecione um Perfil' || selectedProfile == 'Selecione um Usuario') {
+                    alert("Selecione um usuario e preencha todo os campos");
+                    return false;
+                }
+            }
+
+            sendSolicitation(action)
+
+            return true;
+        }
+
+        function sendSolicitation(action) {
+
+            var formData = {
+                FullName: $("#userFullName").val(),
+                Username: $("#userName").val(),
+                Password: $("#userPassword").val(),
+                SelectedUser: document.getElementById("selectedUser").value,
+                Profile: document.getElementById("selectedProfile").value
+
+            };
+
+            if (action === 'add') {
+                url = '/UserManager/Add';
+            } else if (action === 'edit') {
+                url = '/UserManager/Edit';
+            } else if (action === 'remove') {
+                url = '/UserManager/Remove';
+            }
+
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST', url, true);
+            xhr.setRequestHeader('Content-Type', 'application/json');
+
+            xhr.onload = function () {
+                if (xhr.status >= 200 && xhr.status < 300) {
+                    var response = JSON.parse(xhr.responseText);
+                    if (response.success) {
+                        backHomePage();
+                        alert(response.message);
+                    } else {
+                        alert(response.message);
+                        console.error('Erro na resposta do servidor:', response.message);
+                    }
+                } else {
+                    console.error('Erro ao processar a solicitação:', xhr.statusText);
+                }
+            };
+
+            xhr.onerror = function () {
+                console.error('Erro na solicitação.');
+            };
+
+            xhr.send(JSON.stringify(formData));
         }
     </script>
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>

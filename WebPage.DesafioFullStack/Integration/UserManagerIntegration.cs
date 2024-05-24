@@ -5,11 +5,18 @@ using Shared.Models.DesafioFullStack;
 using Shared.Models.DesafioFullStack.Authentication;
 using System.Collections.Generic;
 using System.Globalization;
+using WebPage.DesafioFullStack.Models;
 
 namespace WebPage.DesafioFullStack.Integration
 {
-    public class UserManagerIntegration
+    public static class UserManagerIntegration
     {
+
+        public static bool? IsAdmin { get; set; }
+        public static string? FullName { get; set; }
+        public static bool? Initialized { get; set; }
+
+
         public static List<User> GetUsers()
         {
             try
@@ -20,86 +27,63 @@ namespace WebPage.DesafioFullStack.Integration
             {
                 throw;
             }
-        }        
-
-        public static bool Add(User newUser)
-        {
-            try
-            {
-                List<User> users = GetUsers();
-                users.Add(newUser);
-                var config = new CsvConfiguration(CultureInfo.InvariantCulture)
-                {
-                    Delimiter = ";",
-                    Encoding = System.Text.Encoding.UTF8,
-                    NewLine = Environment.NewLine
-                };
-
-                using (var writer = new StreamWriter(BaseConfigurations.BaseFilesUsersPath))
-                using (var csv = new CsvWriter(writer, config))
-                {
-                    csv.WriteRecords(users);
-                    csv.NextRecord();
-                }
-                return true;
-            }
-            catch (Exception)
-            {
-                return false;
-            }            
         }
 
-        public static bool Update(User updateUser)
+        public static void Add(UserManagementPageModel pageModel)
         {
-            try
+            List<User> users = GetUsers();
+
+            var removeActual = users.Where(x => x.Username == pageModel.Username).FirstOrDefault();
+
+            users.Remove(removeActual);
+
+            var newUser = new User()
             {
-                List<User> users = GetUsers();
-                users.Add(updateUser);
+                Username = pageModel.Username,
+                FullName = pageModel.FullName,
+                Password = pageModel.Password,
+                Profile = pageModel.Profile
+            };
 
-                User? getUserUpdate = users.FirstOrDefault(x => x.Username == updateUser.Username);
+            users.Add(newUser);
 
-                if (getUserUpdate == null)
-                {
-                    return false;
-                }
-
-                getUserUpdate.FullName = updateUser.FullName;
-                getUserUpdate.Username = updateUser.Username;
-                getUserUpdate.Password = updateUser.Password;
-                getUserUpdate.Profile = updateUser.Profile;
-
-                WriteToCsvUsers(users);
-
-                return true;
-            }
-            catch (Exception)
-            {
-                return false;
-            }
+            WriteToCsvUsers(users);
         }
 
-        public static bool Delete(User newUser)
+        public static void Update(UserManagementPageModel pageModel)
         {
-            try
+            List<User> users = GetUsers();
+
+            var updateUser = new User()
             {
-                List<User> users = GetUsers();
+                Username = pageModel.Username,
+                FullName = pageModel.FullName,
+                Password = pageModel.Password,
+                Profile = pageModel.Profile
+            };
 
-                User? getUserToDelete = users.FirstOrDefault(x => x.Username == newUser.Username);
+            users.Add(updateUser);
 
-                if (getUserToDelete == null)
-                {
-                    return false;
-                }
+            WriteToCsvUsers(users);
 
-                users.Remove(getUserToDelete);
-                WriteToCsvUsers(users);
+        }
 
-                return true;
-            }
-            catch (Exception)
+        public static void Remove(UserManagementPageModel pageModel)
+        {
+            List<User> users = GetUsers();
+            var userToRemove =  users.Where(x => x.Username == pageModel.Username).FirstOrDefault();
+
+            var removeUser = new User()
             {
-                return false;
-            }
+                Username = pageModel.Username,
+                FullName = pageModel.FullName,
+                Password = pageModel.Password,
+                Profile = pageModel.Profile
+            };
+
+            users.Remove(userToRemove);
+            WriteToCsvUsers(users);
+
         }
 
         private static void WriteToCsvUsers(List<User> users)
@@ -117,7 +101,6 @@ namespace WebPage.DesafioFullStack.Integration
                 csv.WriteRecords(users);
                 csv.NextRecord();
             }
-
 
         }
     }

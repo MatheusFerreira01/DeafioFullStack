@@ -4,42 +4,30 @@
     ViewBag.Title = "DeviceCommunication";
 }
 
-<h2>Dashboard</h2>
-
-
-<div class="row">
+<h2>Monitoramento</h2>
+<div class="monitor-container">
     <div class="col-md-6">
         <textarea class="form-control" rows="10" readonly>@Model.ResultCommandSender</textarea>
     </div>
-    <div class="col-md-3">
-        <canvas id="myChart" width="400" height="400"></canvas>
-    </div>
-</div>
-
-<div class="row mt-3">
-    <div class="col-md-12">
+    <div class="form-control-select">
         <form asp-controller="Device" asp-action="SubmitCommand" method="post">
             @for (int i = 0; i < Model.SelectedDevices.Count; i++)
             {
                 var device = Model.SelectedDevices[i];
-                <td>
-                    <input type="hidden" name="SelectedDevices[@i].Identifier" value="@device.Identifier" />
-                    <input type="hidden" name="SelectedDevices[@i].Description" value="@device.Description" />
-                    <input type="hidden" name="SelectedDevices[@i].Manufacturer" value="@device.Manufacturer" />
-                    <input type="hidden" name="SelectedDevices[@i].RainVolume" value="@device.RainVolume" />
-                    <input type="hidden" name="SelectedDevices[@i].Url" value="@device.Url" />
-                </td>
+                <input type="hidden" name="SelectedDevices[@i].Identifier" value="@device.Identifier" />
+                <input type="hidden" name="SelectedDevices[@i].Description" value="@device.Description" />
+                <input type="hidden" name="SelectedDevices[@i].Manufacturer" value="@device.Manufacturer" />
+                <input type="hidden" name="SelectedDevices[@i].RainVolume" value="@device.RainVolume" />
+                <input type="hidden" name="SelectedDevices[@i].Url" value="@device.Url" />
             }
             @for (int i = 0; i < Model.CommandsList.Count; i++)
             {
                 var command = Model.CommandsList[i];
-                <td>
-                    <input type="hidden" name="CommandsList[@i].Operation" value="@command.Operation" />
-                    <input type="hidden" name="CommandsList[@i].Description" value="@command.Description" />
-                    <input type="hidden" name="CommandsList[@i].Format" value="@command.Format" />
-                    <input type="hidden" name="CommandsList[@i].Result" value="@command.Result" />
-                    <input type="hidden" name="CommandsList[@i].Tittle" value="@command.Tittle" />
-                </td>
+                <input type="hidden" name="CommandsList[@i].Operation" value="@command.Operation" />
+                <input type="hidden" name="CommandsList[@i].Description" value="@command.Description" />
+                <input type="hidden" name="CommandsList[@i].Format" value="@command.Format" />
+                <input type="hidden" name="CommandsList[@i].Result" value="@command.Result" />
+                <input type="hidden" name="CommandsList[@i].Tittle" value="@command.Tittle" />
             }
             <select class="form-control" name="SelectedCommand">
                 <option value="">Selecione um Comando</option>
@@ -50,21 +38,23 @@
             </select>
             <input type="hidden" name="RefererLastPage" value="@Model.RefererLastPage" />
             <button type="submit" class="btn btn-primary mt-3">Enviar</button>
+            <a class="btn btn-primary mt-3" href="@Url.Action("BackScreen", "Device", Model)">Voltar</a>
         </form>
-        <a class="btn btn-primary mt-3" href="@Url.Action("BackScreen", "Device",Model)">Voltar</a>
     </div>
-</div>
-
-<div class="row mt-3">
-    <div class="col-md-12">
-        <div class="form-group">
-            <div class="form-check form-switch">
-                <input class="form-check-input" type="checkbox" id="realTimeToggle">
-                <label class="form-check-label" for="realTimeToggle">Tempo Real</label>
-            </div>
+    <div class="dash-layout">
+        <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" id="realTimeToggle">
+            <label class="form-check-label" for="realTimeToggle">Tempo Real</label>
+            <label id="loadingMessage" hidden> ...Carregando</label>
+        </div>
+        <div class="form-chart">
+            <canvas id="myChart"></canvas>
         </div>
     </div>
 </div>
+
+
+
 
 
 @section Scripts {
@@ -72,23 +62,28 @@
 
         var intervalId;
         var myChart;
-        var loadingMessage = document.createElement('p');
-        var ctx = document.getElementById('myChart').getContext('2d');  
+        var loadingMessage = document.getElementById('loadingMessage');
+
+        var ctx = document.getElementById('myChart').getContext('2d');
 
         document.getElementById('realTimeToggle').addEventListener('change', function () {
+
             handleRealTimeToggle(this.checked);
 
             if (this.checked) {
-                loadingMessage.textContent = 'Carregando...';
-                document.body.appendChild(loadingMessage);
-                intervalId = setInterval(enviarSolicitacao, 1500);
+                loadingMessage.hidden = false;
+                sendSolicitation();
+                intervalId = setInterval(sendSolicitation, 1500);
+
             } else {
                 clearInterval(intervalId);
+                loadingMessage.hidden = true;
+
             }
         });
 
-        function enviarSolicitacao() {
-            
+        function sendSolicitation() {
+
             var pageObject = @Html.Raw(JsonConvert.SerializeObject(Model));
 
             var pageJson = JSON.stringify(pageObject);
@@ -102,7 +97,6 @@
                 if (xhr.status >= 200 && xhr.status < 300) {
                     var response = JSON.parse(xhr.responseText);
                     if (response.success) {
-                        loadingMessage.textContent = '';
                         updateChart(response.chartLabelsSerialized);
                     } else {
                         console.error('Erro na resposta do servidor:', response.message);
@@ -117,10 +111,9 @@
             };
 
             xhr.send(JSON.stringify(pageModel));
-            console.log('Enviando solicitação...');
         }
 
-        function updateChart(pageModel) { 
+        function updateChart(pageModel) {
             var deviceDataList = JSON.parse(pageModel);
             var labels = [];
             var data = [];
@@ -134,7 +127,6 @@
             }
 
             if (!myChart) {
-                console.log("Entrou no Chart")
                 myChart = new Chart(ctx, {
                     type: 'bar',
                     data: {
@@ -160,6 +152,7 @@
             else {
                 myChart.data.labels = labels;
                 myChart.data.datasets[0].data = data;
+                myChart.data.datasets[0].backgroundColor = backgroundColors;
                 myChart.update();
             }
         }
@@ -176,23 +169,21 @@
                 enviarButton.disabled = false;
             }
         }
-        
+
         var deviceDataList = @Html.Raw(Model.ChartLabelsSerialized);
-        
+
         if (deviceDataList != null) {
 
             var labels = [];
             var data = [];
             var backgroundColors = [];
-            console.log(deviceDataList);
-            for (var i = 0; i < deviceDataList.length; i++) {    
+            for (var i = 0; i < deviceDataList.length; i++) {
                 labels.push(deviceDataList[i].DeviceName);
                 data.push(deviceDataList[i].Data);
                 backgroundColors.push(deviceDataList[i].Color);
             }
 
             if (!myChart) {
-                console.log("Entrou no Chart")
                 myChart = new Chart(ctx, {
                     type: 'bar',
                     data: {

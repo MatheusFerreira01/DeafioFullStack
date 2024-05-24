@@ -34,7 +34,6 @@ namespace Controllers
         [Authorize]
         [HttpGet]
         [ProducesResponseType(typeof(IEnumerable<Device>), 200)]
-        [ProducesResponseType(500)]
         public IActionResult GetListDevices()
         {
             try
@@ -60,7 +59,7 @@ namespace Controllers
         /// <response code="200">Requisição executada com sucesso</response>
         /// <response code="401">As credenciais fornecidas pelo usuário são inexistentes ou inválidas</response>
         /// <response code="500">Erro interno no servidor</response>
-        
+
         [Authorize]
         [HttpPost]
         [ProducesResponseType(typeof(IEnumerable<Device>), 200)]
@@ -90,7 +89,7 @@ namespace Controllers
         /// <response code="200">Requisição executada com sucesso</response>
         /// <response code="401">As credenciais fornecidas pelo usuário são inexistentes ou inválidas</response>
         /// <response code="500">Erro interno no servidor</response>
-        
+
         [Authorize]
         [HttpGet("{Id}")]
         [ProducesResponseType(typeof(IEnumerable<Device>), 200)]
@@ -121,9 +120,8 @@ namespace Controllers
         /// <response code="200">Requisição executada com sucesso</response>
         /// <response code="401">As credenciais fornecidas pelo usuário são inexistentes ou inválidas</response>
         /// <response code="500">Erro interno no servidor</response>
-        
-        [Authorize]
-        [HttpPut("{Id}")]
+
+        [HttpPut()]
         [ProducesResponseType(typeof(IEnumerable<Device>), 200)]
         public IActionResult UpdateDevice(string Identifier, [FromBody] Device UpdateValues)
         {
@@ -151,9 +149,8 @@ namespace Controllers
         /// <response code="200">Requisição executada com sucesso</response>
         /// <response code="401">As credenciais fornecidas pelo usuário são inexistentes ou inválidas</response>
         /// <response code="500">Erro interno no servidor</response>
-        
-        [Authorize]
-        [HttpDelete("{Id}")]
+
+        [HttpDelete()]
         [ProducesResponseType(typeof(IEnumerable<Device>), 200)]
         public IActionResult DeleteDeviceDetais(string Identifier)
         {

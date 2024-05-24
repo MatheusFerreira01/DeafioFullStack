@@ -1,4 +1,4 @@
-﻿@model bool
+﻿@model HomePageModel
 @{
     ViewBag.Title = "Home";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -7,7 +7,7 @@
 <div class="container fixed-top mb-5">
     <div class="row align-items-center">
         <div class="col-md-6">
-            <h2>Bem-vindo(a) @TempData["FullName"].ToString()</h2>
+            <h2>Bem-vindo(a) @Model.FullName</h2>
         </div>
         <div class="col-md-6 text-right">
             <a href="@Url.Action("Logout", "Authentication")" class="btn btn-link text-decoration-none">Sair</a>
@@ -16,16 +16,16 @@
 </div>
 
 <div class="button-container mx-auto">
-    <div class="col-md-4 mb-3">
+    <div class="col-md-4 text-center">
         <a href="@Url.Action("DeviceListSelector", "Device")" class="btn btn-primary btn-block">Monitorar Dispositivos Cadastrados </a>
     </div>
-    @if (Model)
+    @if (Model.IsAdmin != null && Model.IsAdmin == true)
     {
         <div class="col-md-4 mb-3">
-            <a href="@Url.Action("UserManagement", "UserManager")" class="btn btn-secondary btn-block">Gerenciamento de Usuários</a>
+            <a href="@Url.Action("UserManagement", "UserManager")" class="btn btn-warning btn-block">Gerenciamento de Usuários</a>
         </div>
         <div class="col-md-4 mb-3">
-            <a href="@Url.Action("Index", "DeviceManager")" class="btn btn-success btn-block">Gerenciamento de Dispositivos</a> 
+            <a href="@Url.Action("DeviceManagement", "DeviceManager")" class="btn btn-success btn-block">Gerenciamento de Dispositivos</a> 
         </div>
     }
 </div>

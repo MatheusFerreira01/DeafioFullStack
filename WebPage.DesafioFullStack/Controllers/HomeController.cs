@@ -1,13 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
-using Shared.Models.DesafioFullStack;
-using Shared.Models.DesafioFullStack.Authentication;
-using System.Collections.Generic;
-using System.Net.Http;
-using System.Net.Http.Headers;
-using System.Threading.Tasks;
 using WebPage.DesafioFullStack.Integration;
 using WebPage.DesafioFullStack.Models;
-
 public class HomeController : Controller
 {
     private readonly IHttpClientFactory _httpClientFactory;
@@ -19,15 +12,21 @@ public class HomeController : Controller
 
     public async Task<IActionResult> Index()
     {
-        
-        bool? isAdmin = (bool?)TempData["IsAdmin"];
+        string urlAnterior = Request.Headers["Referer"].ToString();
 
-        if (isAdmin == null)
+        var pageModel = new HomePageModel()
         {
-            return RedirectToAction("Logout","Authentication");
+            FullName = UserManagerIntegration.FullName,
+            IsAdmin = UserManagerIntegration.IsAdmin
+        };
+
+        if (urlAnterior.Contains("Login") && UserManagerIntegration.Initialized != null)
+        {
+            return RedirectToAction("Logout", "Authentication");
         }
 
-        return View(isAdmin);
+        UserManagerIntegration.Initialized = true;
 
+        return View(pageModel);
     }
 }

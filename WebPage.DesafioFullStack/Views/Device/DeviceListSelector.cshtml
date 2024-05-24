@@ -3,8 +3,6 @@
     ViewBag.Title = "Dispositivos";
 }
 
-<h2>Dispositivos Cadastrados</h2>
-
 @using (Html.BeginForm("ShowDeviceComunication", "Device", FormMethod.Post, new { id = "deviceForm" }))
 {
         <h2>Dispositivos Cadastrados</h2>
@@ -40,6 +38,8 @@
             Você deve selecionar pelo menos um dispositivo.
         </div>
         <button type="submit" class="btn btn-primary">Consultar</button>
+    <button type="submit" class="btn btn-secondary" onclick="backHomePage()">Voltar</button>
+
 }
 
 
@@ -63,5 +63,9 @@
                 checkbox.checked = event.target.checked;
             });
         });
+
+        function backHomePage() {
+            window.location.href = "/";
+        }
     </script>
 }

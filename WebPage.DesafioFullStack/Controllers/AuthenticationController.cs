@@ -58,14 +58,20 @@ public class AuthenticationController : Controller
         {
             isAdmin = true;
         }
-        TempData["IsAdmin"] = isAdmin;
-        TempData["FullName"] = userProfile.FullName ;
-        return RedirectToAction("Index","Home");
+
+        UserManagerIntegration.IsAdmin = isAdmin;
+        UserManagerIntegration.FullName = userProfile.FullName;
+
+        return RedirectToAction("Index", "Home");
     }   
 
     [HttpGet]
     public IActionResult Logout()
     {
+        UserManagerIntegration.IsAdmin = null;
+        UserManagerIntegration.FullName = null;
+        UserManagerIntegration.Initialized = null;
+
         HttpContext.Session.Remove("AuthenticationToken");
         return RedirectToAction("Login");
     }

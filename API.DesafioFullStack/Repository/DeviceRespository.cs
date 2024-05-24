@@ -77,7 +77,6 @@ namespace API.DesafioFullStack.Services
             getDeviceUpdate.Identifier = Identifier;
             getDeviceUpdate.Manufacturer = UpdateValues.Manufacturer;
             getDeviceUpdate.Description = UpdateValues.Description;
-            getDeviceUpdate.Url = UpdateValues.Url;
 
             WriteDevicesToCsv(getDevices, BaseConfigurations.BaseFilesDevicesPath);
 

@@ -1,6 +1,5 @@
 FullName;Username;Password;Profile
-Perfil Standard;admin;admin;ADMINISTRADOR
-Matheus Henrique Ferreira;matheus;password;ADMINISTRADOR
+Perfil Admin;admin;admin;ADMINISTRADOR
 Usuario Dummy;user;password;VISUALIZACAO
-Criação local;local;local;VISUALIZACAO
+Matheus Henrique;matheus;matheus;ADMINISTRADOR
 
