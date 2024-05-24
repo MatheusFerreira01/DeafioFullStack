@@ -17,7 +17,8 @@ Escopo do Projeto
 	O projeto foi dividido em 4 programas separados, onde 3 deles (DeviceIoTGenerator, Api e Web) são executados simultaneamente em
 	que irei detalhar no próximo tópico;		
 	
-Conjunto do Projeto: 
+Conjunto do Projeto:
+ 
 	DeviceIoTGenerator:
 		Este projeto é responsável por emular os dispositivos IoT sensores de chuva; a princípio tentei criar
 		utilizando MQTT, porém como a ideia seria a troca de informações ser feita em Telnet, estudei também
